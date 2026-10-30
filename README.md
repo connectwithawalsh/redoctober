@@ -12,6 +12,26 @@ Think of it as the control room of a submarine: dark, focused, with just enough 
 
 Dark only, for now. Colors are named for the console instruments; see [PALETTE.md](PALETTE.md).
 
+![Neovim with the snacks explorer, inside Zellij](docs/screenshots/neovim-zellij.png)
+
+## Screenshots
+
+**Ghostty** with the Starship prompt, `ls` and `git log`
+
+![Ghostty with the Starship prompt](docs/screenshots/ghostty.png)
+
+**lazygit**
+
+![lazygit](docs/screenshots/lazygit.png)
+
+**Yazi**
+
+![Yazi](docs/screenshots/yazi.png)
+
+**bat**
+
+![bat showing this README](docs/screenshots/bat.png)
+
 ## Install
 
 ### Quick install (macOS and Linux)
