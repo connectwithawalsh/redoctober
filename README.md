@@ -29,10 +29,10 @@ scripts/install.sh           # install for the apps you have
 |---|---|
 | `--list`, `--dry-run` | show what would happen |
 | `--link` | symlink to the clone instead of copying |
-| `--only a,b` | limit to `ghostty,zellij,yazi,bat,wezterm,meli,opencode,claude,lazygit,xcode` |
+| `--only a,b` | limit to `ghostty,zellij,yazi,bat,wezterm,meli,opencode,claude,xcode` |
 | `--all` | install for every app, found or not |
 
-A different existing file is kept as `<name>.bak`. The installer prints the one line each app still needs in its config (for example `theme = redoctober`). Starship and lazygit are merge-only (neither can import a theme file), so the installer just tells you what to paste. Neovim and Yazi have their own package install, below. Windows isn't supported yet; copy the files by hand.
+A different existing file is kept as `<name>.bak`. The installer prints the one line each app still needs in its config (for example `theme = redoctober`). Starship and lazygit are merge-only (neither can import a theme file), so the installer prints a block for you to copy and paste. Neovim and Yazi have their own package install, below. Windows isn't supported yet; copy the files by hand.
 
 ### Manual install
 
@@ -104,10 +104,10 @@ Copy `opencode/redoctober.json` to `~/.config/opencode/themes/redoctober.json`, 
 
 ### lazygit
 
-Lazygit can't import a theme file, so either merge the `gui.theme` block from `lazygit/redoctober.yml` into your `config.yml`, or load it next to your config (the installer puts it in `<lazygit config dir>/themes/`):
+Lazygit can't import a theme file, so the installer prints the block to paste. Merge the `gui.theme` block from `lazygit/redoctober.yml` into your `config.yml`, or load the file next to your config (lazygit merges a comma-separated list):
 
 ```sh
-LG_CONFIG_FILE="$HOME/.config/lazygit/config.yml,$HOME/.config/lazygit/themes/redoctober.yml" lazygit
+LG_CONFIG_FILE="$(lazygit --print-config-dir)/config.yml,/path/to/redoctober/lazygit/redoctober.yml" lazygit
 ```
 
 ### Claude Code

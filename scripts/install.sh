@@ -136,14 +136,33 @@ if [ "$(uname)" = Darwin ]; then
   }
 fi
 
+paste_lazygit=0 paste_starship=0
 if wanted lazygit && { [ "$all" = 1 ] || found lazygit; }; then
-  note lazygit "merge the gui.theme block from $root/lazygit/redoctober.yml into config.yml, or run lazygit with LG_CONFIG_FILE set to your config.yml and that file, comma-separated"
+  paste_lazygit=1
+  note lazygit "copy the block printed below into your lazygit config.yml"
 fi
 
 if wanted starship && { [ "$all" = 1 ] || found starship; }; then
-  note starship 'merge starship/redoctober.toml into starship.toml and set palette = "redoctober"'
+  paste_starship=1
+  note starship "copy the block printed below into your starship.toml"
 fi
 
-if [ "$dry" = 0 ] && [ -n "$notes" ]; then
-  printf '\nnext:%s\n' "$notes"
+if [ "$dry" = 0 ]; then
+  [ -n "$notes" ] && printf '\nnext:%s\n' "$notes"
+
+  if [ "$paste_starship" = 1 ]; then
+    printf '\n---- starship ----\n'
+    printf '1. Add this line at the top of starship.toml, above any [section]:\n\n  palette = "redoctober"\n\n'
+    printf '2. Add this table anywhere in starship.toml:\n\n'
+    cat "$root/starship/redoctober.toml"
+    printf '\nYour styles must use these color names (for example fg:bg0, bg:green).\n'
+  fi
+
+  if [ "$paste_lazygit" = 1 ]; then
+    printf '\n---- lazygit ----\n'
+    printf 'Merge this into your config.yml (replace an existing gui.theme block):\n\n'
+    cat "$root/lazygit/redoctober.yml"
+    printf '\nOr leave config.yml alone and run lazygit with this theme loaded next to it:\n\n'
+    printf '  LG_CONFIG_FILE="$(lazygit --print-config-dir)/config.yml,%s/lazygit/redoctober.yml" lazygit\n' "$root"
+  fi
 fi
