@@ -1,0 +1,77 @@
+[terminal.themes.redoctober]
+"theme_default" = { fg = "#dac8b8", bg = "#1a1818", attrs = "Default" }
+"text.unfocused" = { fg = "#786866" }
+"text.error" = { fg = "#d47070" }
+"text.highlight" = { fg = "#a18080", attrs = "Reverse" }
+"error_message" = { fg = "#d47070" }
+"highlight" = { fg = "#1a1818", bg = "#dac8b8", attrs = "Bold" }
+"status.bar" = { fg = "#dac8b8", bg = "#382828" }
+"status.command_bar" = { fg = "#dac8b8", bg = "#282020" }
+"status.history" = { fg = "#bc8490", bg = "#282020" }
+"status.history.hints" = { fg = "#786866", bg = "#282020" }
+"status.notification" = { fg = "#bc8490" }
+"tab.focused" = { fg = "#dac8b8", bg = "#382828" }
+"tab.unfocused" = { fg = "#786866", bg = "#282020" }
+"tab.bar" = { fg = "#786866", bg = "#1a1818" }
+"widgets.list.header" = { fg = "#1a1818", bg = "#879a80", attrs = "Bold" }
+"widgets.form.label" = { fg = "#dac8b8", attrs = "Bold" }
+"widgets.form.field" = { fg = "#dac8b8" }
+"widgets.form.highlighted" = { fg = "#dac8b8", bg = "#382828" }
+"widgets.options.highlighted" = { fg = "#dac8b8", bg = "#382828" }
+"mail.sidebar" = { fg = "#dac8b8", bg = "#282020" }
+"mail.sidebar_divider" = { fg = "#382828", bg = "#1a1818" }
+"mail.sidebar_account_name" = { fg = "#a18080", attrs = "Bold" }
+"mail.sidebar_unread_count" = { fg = "#c8a870" }
+"mail.sidebar_index" = { fg = "#786866" }
+"mail.sidebar_highlighted" = { fg = "#dac8b8", bg = "#382828" }
+"mail.sidebar_highlighted_unread_count" = { fg = "#c8a870" }
+"mail.sidebar_highlighted_index" = { fg = "#786866" }
+"mail.sidebar_highlighted_account" = { fg = "#dac8b8", bg = "#382828" }
+"mail.sidebar_highlighted_account_name" = { fg = "#a18080", attrs = "Bold" }
+"mail.sidebar_highlighted_account_unread_count" = { fg = "#c8a870" }
+"mail.sidebar_highlighted_account_index" = { fg = "#786866" }
+"mail.view.divider" = { fg = "#382828" }
+"mail.view.headers" = { fg = "#879a80" }
+"mail.view.headers_names" = { fg = "#786866" }
+"mail.view.headers_area" = { fg = "#dac8b8" }
+"mail.view.body" = { fg = "#dac8b8" }
+"mail.view.thread.indentation.a" = { bg = "#a18080" }
+"mail.view.thread.indentation.b" = { bg = "#d47070" }
+"mail.view.thread.indentation.c" = { bg = "#bc8490" }
+"mail.view.thread.indentation.d" = { bg = "#c8a870" }
+"mail.view.thread.indentation.e" = { bg = "#cc8060" }
+"mail.view.thread.indentation.f" = { bg = "#879a80" }
+"mail.listing.compact.even" = { fg = "#dac8b8", bg = "#1a1818" }
+"mail.listing.compact.odd" = { fg = "#dac8b8", bg = "#1a1818" }
+"mail.listing.compact.even_unseen" = { fg = "#c8a870", bg = "#282020", attrs = "Bold" }
+"mail.listing.compact.odd_unseen" = { fg = "#c8a870", bg = "#282020", attrs = "Bold" }
+"mail.listing.compact.even_selected" = { fg = "#dac8b8", bg = "#382828" }
+"mail.listing.compact.odd_selected" = { fg = "#dac8b8", bg = "#382828" }
+"mail.listing.compact.even_highlighted" = { fg = "#dac8b8", bg = "#382828" }
+"mail.listing.compact.odd_highlighted" = { fg = "#dac8b8", bg = "#382828" }
+"mail.listing.compact.even_highlighted_selected" = { fg = "#dac8b8", bg = "#382828", attrs = "Reverse" }
+"mail.listing.compact.odd_highlighted_selected" = { fg = "#dac8b8", bg = "#382828", attrs = "Reverse" }
+"mail.listing.conversations" = { fg = "#786866" }
+"mail.listing.conversations.subject" = { fg = "#dac8b8" }
+"mail.listing.conversations.from" = { fg = "#786866" }
+"mail.listing.conversations.date" = { fg = "#bc8490" }
+"mail.listing.conversations.unseen" = { fg = "#c8a870", bg = "#282020", attrs = "Bold" }
+"mail.listing.conversations.highlighted" = { fg = "#dac8b8", bg = "#382828", attrs = "Bold" }
+"mail.listing.conversations.selected" = { fg = "#dac8b8", bg = "#382828" }
+"mail.listing.conversations.highlighted_selected" = { fg = "#dac8b8", bg = "#382828", attrs = "Reverse" }
+"mail.listing.plain.even" = { fg = "#dac8b8", bg = "#1a1818" }
+"mail.listing.plain.odd" = { fg = "#dac8b8", bg = "#1a1818" }
+"mail.listing.plain.even_unseen" = { fg = "#c8a870", bg = "#282020", attrs = "Bold" }
+"mail.listing.plain.odd_unseen" = { fg = "#c8a870", bg = "#282020", attrs = "Bold" }
+"mail.listing.plain.even_selected" = { fg = "#dac8b8", bg = "#382828" }
+"mail.listing.plain.odd_selected" = { fg = "#dac8b8", bg = "#382828" }
+"mail.listing.plain.even_highlighted" = { fg = "#dac8b8", bg = "#382828" }
+"mail.listing.plain.odd_highlighted" = { fg = "#dac8b8", bg = "#382828" }
+"mail.listing.plain.even_highlighted_selected" = { fg = "#dac8b8", bg = "#382828", attrs = "Reverse" }
+"mail.listing.plain.odd_highlighted_selected" = { fg = "#dac8b8", bg = "#382828", attrs = "Reverse" }
+"mail.listing.attachment_flag" = { fg = "#786866" }
+"mail.listing.thread_snooze_flag" = { fg = "#d47070" }
+"mail.listing.tag_default" = { fg = "#1a1818", bg = "#879a80", attrs = "Bold" }
+"mail.listing.highlight_self" = { fg = "#a18080" }
+"pager.highlight_search" = { fg = "#1a1818", bg = "#c8a870", attrs = "Bold" }
+"pager.highlight_search_current" = { fg = "#1a1818", bg = "#cc8060", attrs = "Bold" }
