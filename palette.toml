@@ -1,0 +1,106 @@
+# redoctober palette: the single source of truth. Every theme file is generated from it
+# (nvim -l scripts/generate.lua). Templates use {{base}} names, {{tint.x}}, {{role.x}} or
+# {{ansi.x}}; the Neovim and Xcode themes are written against the roles.
+# Dark only for now.
+
+[meta]
+name   = "redoctober"
+author = "Stephen Walsh"
+
+# Base palette: the instruments on the console.
+[base]
+# Hull: backgrounds, darkest to lightest
+void      = "#141414" # bg_dim   dimmed screen edge
+abyss     = "#1a1818" # bg0      default background
+panel     = "#282020" # bg1      panels, cursor line
+bezel     = "#382828" # bg2      elements, popups
+bulkhead  = "#443030" # bg3      borders, inactive tabs
+rivet     = "#4e3434" # bg4      splits, whitespace chars
+
+# Ink: foregrounds
+chart     = "#dac8b8" # fg       default text
+fog       = "#a09088" # grey2    line numbers, inactive labels
+silt      = "#786866" # muted    comments, borders
+
+# Lamps: accents
+alarm     = "#d47070" # red
+flare     = "#cc8060" # orange
+brass     = "#c8a870" # yellow
+sonar     = "#879a80" # green
+copper    = "#a07864" # aqua
+steel     = "#a18080" # blue
+dusk      = "#bc8490" # purple
+
+# Off-axis shades used by individual tools (OpenCode). Candidates to unify later.
+pitch     = "#000000" # Zellij frame and title filler, true black. Candidate to fold into void.
+trench    = "#2a1c1c" # muted background
+silt_dim  = "#726460" # comment text, a touch darker than silt
+sonar_lit = "#909a88" # diff highlight, added
+alarm_lit = "#e08080" # diff highlight, removed
+
+# Tinted backgrounds for diffs and diagnostics
+[base.tint]
+visual = "#3c2424" # bg_visual
+alarm  = "#3e2020" # bg_red
+sonar  = "#242e20" # bg_green
+steel  = "#20242e" # bg_blue
+brass  = "#2e2a1a" # bg_yellow
+
+# Roles: what each color means. Tool templates reference only these.
+# Values name a [base] key, or a [base.tint] key as "tint.<name>".
+[roles]
+bg            = "abyss"
+bg_dim        = "void"
+surface       = "panel"
+overlay       = "bezel"
+border        = "bulkhead"
+guide         = "rivet"
+selection     = "tint.visual"
+
+fg            = "chart"
+fg_dim        = "fog"
+comment       = "silt"
+line_nr       = "silt_dim"
+
+error         = "alarm"
+warning       = "brass"
+ok            = "sonar"
+info          = "steel"
+
+diff_delete   = "tint.alarm"
+diff_add      = "tint.sonar"
+diff_change   = "tint.steel"
+warning_bg    = "tint.brass"
+
+# Syntax follows the shipped Neovim look: near-monochrome, only keywords (alarm)
+# and types (copper) carry color; strings, constants and numbers sit back in fog.
+keyword       = "alarm"
+type          = "copper"
+function      = "chart"
+operator      = "chart"
+identifier    = "chart"    # Neovim dims this 50% toward fg_dim
+string        = "fog"
+constant      = "fog"
+number        = "fog"
+special       = "fog"
+accent        = "alarm"
+hint          = "dusk"
+
+# ANSI mapping for terminals (slot -> role or base key).
+[ansi]
+black          = "void"
+red            = "alarm"
+green          = "sonar"
+yellow         = "brass"
+blue           = "steel"
+magenta        = "dusk"
+cyan           = "copper"
+white          = "fog"
+bright_black   = "silt"
+bright_red     = "alarm"
+bright_green   = "sonar"
+bright_yellow  = "brass"
+bright_blue    = "steel"
+bright_magenta = "dusk"
+bright_cyan    = "copper"
+bright_white   = "chart"
