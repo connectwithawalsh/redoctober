@@ -1,5 +1,5 @@
-# redoctober for lazygit. Merge this gui.theme block into your config.yml, or load it
-# alongside your config: LG_CONFIG_FILE="<config dir>/config.yml,<config dir>/themes/redoctober.yml"
+# Red October for lazygit. Merge this gui.theme block into your config.yml, or load this file
+# next to it: LG_CONFIG_FILE="/path/to/config.yml,/path/to/redoctober.yml" lazygit
 gui:
   theme:
     activeBorderColor:
