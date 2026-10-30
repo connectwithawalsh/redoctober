@@ -1,0 +1,62 @@
+[colors]
+foreground      = "#dac8b8"
+background      = "#1a1818"
+cursor_bg       = "#d47070"
+cursor_border   = "#d47070"
+cursor_fg       = "#1a1818"
+selection_bg    = "#382828"
+selection_fg    = "#dac8b8"
+scrollbar_thumb = "#382828"
+split           = "#382828"
+compose_cursor  = "#d47070"
+
+ansi = [
+  "#1a1818",
+  "#d47070",
+  "#879a80",
+  "#c8a870",
+  "#a18080",
+  "#bc8490",
+  "#a07864",
+  "#dac8b8",
+]
+
+brights = [
+  "#382828",
+  "#d47070",
+  "#879a80",
+  "#c8a870",
+  "#a18080",
+  "#bc8490",
+  "#a07864",
+  "#dac8b8",
+]
+
+[colors.tab_bar]
+background = "#1a1818"
+
+[colors.tab_bar.active_tab]
+bg_color = "#382828"
+fg_color = "#dac8b8"
+
+[colors.tab_bar.inactive_tab]
+bg_color = "#1a1818"
+fg_color = "#786866"
+
+[colors.tab_bar.inactive_tab_hover]
+bg_color = "#282020"
+fg_color = "#dac8b8"
+
+[colors.tab_bar.new_tab]
+bg_color = "#1a1818"
+fg_color = "#786866"
+
+[colors.tab_bar.new_tab_hover]
+bg_color = "#382828"
+fg_color = "#dac8b8"
+
+[metadata]
+aliases      = []
+author       = "Stephen Walsh"
+name         = "redoctober"
+origin_url   = "https://github.com/connectwithawalsh/redoctober"
