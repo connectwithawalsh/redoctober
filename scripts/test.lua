@@ -249,6 +249,19 @@ test("xcode: .xccolortheme and .xcworkspacecolortheme agree under Xcode's migrat
   end
 end)
 
+-- `ya pkg add` copies exactly these files out of redoctober.yazi/ and fails if any is missing
+-- (found by trial against ya 26.9; a missing LICENSE deletes the user's installed flavor).
+test("yazi: flavor folder has every file ya pkg add requires", function()
+  for _, name in ipairs { "flavor.toml", "tmtheme.xml", "LICENSE", "LICENSE-tmtheme", "README.md", "preview.png" } do
+    assert(vim.fn.filereadable(gen.root .. "/redoctober.yazi/" .. name) == 1, "redoctober.yazi/" .. name .. " is missing")
+  end
+  local license = read(gen.root .. "/LICENSE")
+  assert(read(gen.root .. "/redoctober.yazi/LICENSE") == license, "yazi LICENSE differs from the root LICENSE")
+  assert(read(gen.root .. "/redoctober.yazi/LICENSE-tmtheme") == license, "yazi LICENSE-tmtheme differs from the root LICENSE")
+  local png = read(gen.root .. "/redoctober.yazi/preview.png")
+  assert(png:sub(2, 4) == "PNG", "preview.png is not a PNG")
+end)
+
 -- Token names from Claude Code's "Create a custom theme" docs. Unknown tokens are silently
 -- ignored by Claude Code, so a typo here would be a theme color that never applies.
 local CLAUDE_TOKENS = {}
