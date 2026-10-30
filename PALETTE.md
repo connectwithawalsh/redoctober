@@ -1,5 +1,5 @@
 <!-- Generated from palette.toml by scripts/generate.lua. Edit the template in templates/PALETTE.md. -->
-# Redoctober Palette
+# Red October Palette
 
 Colors are named for the instruments on a submarine console. The tables below say what each color
 is used for in the Neovim and Xcode themes.

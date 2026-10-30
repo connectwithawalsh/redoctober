@@ -1,4 +1,4 @@
-# redoctober
+# Red October
 
 > The dark side of the moon has a certain something.
 
@@ -29,10 +29,10 @@ scripts/install.sh           # install for the apps you have
 |---|---|
 | `--list`, `--dry-run` | show what would happen |
 | `--link` | symlink to the clone instead of copying |
-| `--only a,b` | limit to `ghostty,zellij,yazi,bat,wezterm,meli,opencode,claude,xcode` |
+| `--only a,b` | limit to `ghostty,zellij,yazi,bat,wezterm,meli,opencode,claude,lazygit,xcode` |
 | `--all` | install for every app, found or not |
 
-A different existing file is kept as `<name>.bak`. The installer prints the one line each app still needs in its config (for example `theme = redoctober`). Starship is merge-only, so it just tells you what to paste. Neovim and Yazi have their own package install, below. Windows isn't supported yet; copy the files by hand.
+A different existing file is kept as `<name>.bak`. The installer prints the one line each app still needs in its config (for example `theme = redoctober`). Starship and lazygit are merge-only (neither can import a theme file), so the installer just tells you what to paste. Neovim and Yazi have their own package install, below. Windows isn't supported yet; copy the files by hand.
 
 ### Manual install
 
@@ -102,9 +102,17 @@ Copy `meli/redoctober.toml` to `~/.config/meli/themes/redoctober.toml` and set `
 
 Copy `opencode/redoctober.json` to `~/.config/opencode/themes/redoctober.json`, then set `"theme": "redoctober"` in `tui.json`.
 
+### lazygit
+
+Lazygit can't import a theme file, so either merge the `gui.theme` block from `lazygit/redoctober.yml` into your `config.yml`, or load it next to your config (the installer puts it in `<lazygit config dir>/themes/`):
+
+```sh
+LG_CONFIG_FILE="$HOME/.config/lazygit/config.yml,$HOME/.config/lazygit/themes/redoctober.yml" lazygit
+```
+
 ### Claude Code
 
-Copy `claude/redoctober.json` to `~/.claude/themes/redoctober.json`, then run `/theme` in Claude Code and pick **redoctober** (restart once if `~/.claude/themes/` didn't exist). It's a custom theme on the `dark` base that recolors the accent, status, diff, message-background and subagent tokens.
+Copy `claude/redoctober.json` to `~/.claude/themes/redoctober.json`, then run `/theme` in Claude Code and pick **Red October** (restart once if `~/.claude/themes/` didn't exist). It's a custom theme on the `dark` base that recolors the accent, status, diff, message-background and subagent tokens.
 
 ### Xcode
 
@@ -119,7 +127,7 @@ The `.xccolortheme` colors are written in Generic RGB, which is how Xcode reads 
 
 `palette.toml` is the single source of truth. Every theme file is generated from it, so a color change is one edit and a regenerate.
 
-```
+```text
 palette.toml        base colors, roles, ANSI mapping
 templates/          one template per generated file, with {{placeholders}}
 scripts/            generator, tests, color math

@@ -1,5 +1,5 @@
 {
-  "name": "redoctober",
+  "name": "Red October",
   "base": "dark",
   "overrides": {
     "claude": "{{alarm}}",

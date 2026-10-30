@@ -1,5 +1,4 @@
-// Ported from dot_config/wezterm/colors/redoctober.lua and
-// dot_config/ghostty/themes/redoctober — same 16-color palette.
+// Red October for Zellij. Same 16-color palette as the Ghostty and WezTerm themes.
 //
 // This uses zellij's newer named-style theme schema instead of the old flat
 // fg/bg/black/red/... palette. That's required, not stylistic: zellij's KDL

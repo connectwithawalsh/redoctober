@@ -1,4 +1,4 @@
--- Highlight groups for redoctober. Colors come from palette.lua (generated from
+-- Highlight groups for Red October. Colors come from palette.lua (generated from
 -- palette.toml); this file holds no hex literals. Shades that sit between two
 -- palette colors are blended at load time.
 local M = {}

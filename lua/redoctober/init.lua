@@ -5,7 +5,7 @@ local M = {}
 --- ColorScheme autocmd to survive a theme switch.
 function M.load()
   if vim.o.background ~= "dark" then
-    vim.notify_once("redoctober: no light variant yet, using the dark palette", vim.log.levels.WARN)
+    vim.notify_once("Red October: no light variant yet, using the dark palette", vim.log.levels.WARN)
   end
 
   vim.cmd "highlight clear"

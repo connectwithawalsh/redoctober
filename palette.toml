@@ -1,4 +1,4 @@
-# redoctober palette: the single source of truth. Every theme file is generated from it
+# Red October palette: the single source of truth. Every theme file is generated from it
 # (nvim -l scripts/generate.lua). Templates use {{base}} names, {{tint.x}}, {{role.x}} or
 # {{ansi.x}}; the Neovim and Xcode themes are written against the roles.
 # Dark only for now.

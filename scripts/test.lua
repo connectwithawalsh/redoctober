@@ -314,7 +314,7 @@ test("claude: valid theme using only documented tokens and palette colors", func
   local known = {}
   for _, hex in pairs(values) do known[hex] = true end
   local theme = vim.json.decode(gen.build()["claude/redoctober.json"])
-  assert(theme.base == "dark" and theme.name == "redoctober")
+  assert(theme.base == "dark" and theme.name == "Red October")
   for token, hex in pairs(theme.overrides) do
     assert(CLAUDE_TOKENS[token], "unknown Claude Code color token: " .. token)
     assert(known[hex], token .. " = " .. hex .. " is not in the palette")
@@ -336,7 +336,6 @@ local function install(args, home)
     YAZI_CONFIG_HOME = home .. "/.config/yazi",
     ZELLIJ_CONFIG_DIR = home .. "/.config/zellij",
     CLAUDE_CONFIG_DIR = home .. "/.claude",
-    CONFIG_DIR = home .. "/.config/lazygit",
   }
   local cmd = { "sh", gen.root .. "/scripts/install.sh" }
   vim.list_extend(cmd, args)
@@ -368,7 +367,6 @@ test("install: --all copies every theme to its default directory", function()
   assert(same_file(gen.root .. "/meli/redoctober.toml", cfg .. "/meli/themes/redoctober.toml"), "meli")
   assert(same_file(gen.root .. "/opencode/redoctober.json", cfg .. "/opencode/themes/redoctober.json"), "opencode")
   assert(same_file(gen.root .. "/claude/redoctober.json", home .. "/.claude/themes/redoctober.json"), "claude")
-  assert(same_file(gen.root .. "/lazygit/redoctober.yml", cfg .. "/lazygit/themes/redoctober.yml"), "lazygit")
   if vim.uv.os_uname().sysname == "Darwin" then
     assert(same_file(gen.root .. "/xcode/redoctober.xccolortheme", home .. "/Library/Developer/Xcode/UserData/FontAndColorThemes/redoctober.xccolortheme"), "xcode")
   end
@@ -396,6 +394,15 @@ test("install: --dry-run and --list change nothing, --only filters", function()
   assert(install({ "--only", "meli", "--all" }, home) == 0)
   assert(vim.fn.filereadable(home .. "/.config/meli/themes/redoctober.toml") == 1)
   assert(vim.fn.isdirectory(home .. "/.config/ghostty") == 0, "--only installed another target")
+end)
+
+test("install: lazygit and starship are merge-only (nothing written, instructions printed)", function()
+  local home = sandbox()
+  local code, out = install({ "--only", "lazygit,starship", "--all" }, home)
+  assert(code == 0, out)
+  assert(out:find "lazygit: merge the gui.theme block", out)
+  assert(out:find "starship: merge", out)
+  assert(vim.fn.isdirectory(home .. "/.config") == 0, "a merge-only target wrote files")
 end)
 
 test("install: --link symlinks into this clone", function()

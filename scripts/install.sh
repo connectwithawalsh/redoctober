@@ -1,5 +1,5 @@
 #!/bin/sh
-# Install redoctober for the apps you have, into each app's default directory.
+# Install Red October for the apps you have, into each app's default directory.
 # macOS and Linux. Neovim is not handled here: use your plugin manager (see README).
 #
 #   scripts/install.sh [--list] [--dry-run] [--link] [--all] [--only a,b]
@@ -7,9 +7,10 @@
 #   --list, --dry-run  show what would happen, change nothing
 #   --link             symlink to this clone instead of copying
 #   --all              install for every app, even if it was not detected
-#   --only a,b         limit to: ghostty zellij yazi bat wezterm meli opencode claude lazygit xcode
+#   --only a,b         limit to: ghostty zellij yazi bat wezterm meli opencode claude xcode
 #
-# A different existing file is kept as <name>.bak. Starship is merge-only.
+# A different existing file is kept as <name>.bak. Starship and lazygit are merge-only:
+# neither can import a theme file, so the script only tells you what to do.
 set -eu
 
 root=$(cd "$(dirname "$0")/.." && pwd)
@@ -121,15 +122,9 @@ go opencode opencode && {
   note opencode 'set `"theme": "redoctober"` in tui.json'
 }
 
-go lazygit lazygit && {
-  lg_dir=$(lazygit --print-config-dir 2>/dev/null || true)
-  place lazygit "$root/lazygit/redoctober.yml" "${lg_dir:-$cfg/lazygit}/themes/redoctober.yml"
-  note lazygit 'merge the gui.theme block into config.yml, or set LG_CONFIG_FILE="<dir>/config.yml,<dir>/themes/redoctober.yml"'
-}
-
 go claude claude && {
   place claude "$root/claude/redoctober.json" "${CLAUDE_CONFIG_DIR:-$HOME/.claude}/themes/redoctober.json"
-  note claude 'run /theme and pick redoctober (restart once if ~/.claude/themes did not exist)'
+  note claude 'run /theme and pick Red October (restart once if ~/.claude/themes did not exist)'
 }
 
 if [ "$(uname)" = Darwin ]; then
@@ -139,6 +134,10 @@ if [ "$(uname)" = Darwin ]; then
     place xcode "$root/xcode/redoctober.xcworkspacecolortheme" "$xc/redoctober.xcworkspacecolortheme"
     note xcode "restart Xcode, then pick redoctober in Settings > Themes"
   }
+fi
+
+if wanted lazygit && { [ "$all" = 1 ] || found lazygit; }; then
+  note lazygit "merge the gui.theme block from $root/lazygit/redoctober.yml into config.yml, or run lazygit with LG_CONFIG_FILE set to your config.yml and that file, comma-separated"
 fi
 
 if wanted starship && { [ "$all" = 1 ] || found starship; }; then
