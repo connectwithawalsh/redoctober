@@ -1,0 +1,137 @@
+// Ported from dot_config/wezterm/colors/redoctober.lua and
+// dot_config/ghostty/themes/redoctober — same 16-color palette.
+//
+// This uses zellij's newer named-style theme schema instead of the old flat
+// fg/bg/black/red/... palette. That's required, not stylistic: zellij's KDL
+// parser treats a theme block as all-or-nothing — if every node name is one
+// of the old palette color names it uses the legacy derivation, otherwise it
+// switches entirely to named styles and falls back to generic defaults for
+// anything not spelled out here. The old palette's derivation always set
+// every *_selected component's background to the theme's plain `bg`
+// (#1a1818), which is the same as the normal pane background, so selection
+// highlights (pane text, session-manager list rows, table cells) had no
+// visible highlight at all. Every block below reproduces that same legacy
+// derivation exactly (see zellij-utils src/data.rs `impl From<Palette> for
+// Styling`), except text_selected/list_selected/table_cell_selected's
+// background, which now use the theme's `red` (#d47070) so selection is
+// actually visible.
+themes {
+    redoctober {
+        text_unselected {
+            base "#dac8b8"
+            background "#141414"
+            emphasis_0 "#c8a870"
+            emphasis_1 "#a07864"
+            emphasis_2 "#879a80"
+            emphasis_3 "#bc8490"
+        }
+        text_selected {
+            base "#dac8b8"
+            background "#d47070"
+            emphasis_0 "#c8a870"
+            emphasis_1 "#a07864"
+            emphasis_2 "#879a80"
+            emphasis_3 "#bc8490"
+        }
+        ribbon_unselected {
+            base "#141414"
+            background "#dac8b8"
+            emphasis_0 "#d47070"
+            emphasis_1 "#dac8b8"
+            emphasis_2 "#a18080"
+            emphasis_3 "#bc8490"
+        }
+        ribbon_selected {
+            base "#141414"
+            background "#879a80"
+            emphasis_0 "#d47070"
+            emphasis_1 "#c8a870"
+            emphasis_2 "#bc8490"
+            emphasis_3 "#a18080"
+        }
+        table_title {
+            base "#879a80"
+            background "#000000"
+            emphasis_0 "#c8a870"
+            emphasis_1 "#a07864"
+            emphasis_2 "#879a80"
+            emphasis_3 "#bc8490"
+        }
+        table_cell_unselected {
+            base "#dac8b8"
+            background "#141414"
+            emphasis_0 "#c8a870"
+            emphasis_1 "#a07864"
+            emphasis_2 "#879a80"
+            emphasis_3 "#bc8490"
+        }
+        table_cell_selected {
+            base "#dac8b8"
+            background "#d47070"
+            emphasis_0 "#c8a870"
+            emphasis_1 "#a07864"
+            emphasis_2 "#879a80"
+            emphasis_3 "#bc8490"
+        }
+        list_unselected {
+            base "#dac8b8"
+            background "#141414"
+            emphasis_0 "#c8a870"
+            emphasis_1 "#a07864"
+            emphasis_2 "#879a80"
+            emphasis_3 "#bc8490"
+        }
+        list_selected {
+            base "#dac8b8"
+            background "#d47070"
+            emphasis_0 "#c8a870"
+            emphasis_1 "#a07864"
+            emphasis_2 "#879a80"
+            emphasis_3 "#bc8490"
+        }
+        frame_selected {
+            base "#879a80"
+            background "#000000"
+            emphasis_0 "#c8a870"
+            emphasis_1 "#a07864"
+            emphasis_2 "#bc8490"
+            emphasis_3 "#000000"
+        }
+        frame_highlight {
+            base "#c8a870"
+            background "#000000"
+            emphasis_0 "#bc8490"
+            emphasis_1 "#000000"
+            emphasis_2 "#c8a870"
+            emphasis_3 "#c8a870"
+        }
+        exit_code_success {
+            base "#879a80"
+            background "#000000"
+            emphasis_0 "#a07864"
+            emphasis_1 "#141414"
+            emphasis_2 "#bc8490"
+            emphasis_3 "#a18080"
+        }
+        exit_code_error {
+            base "#d47070"
+            background "#000000"
+            emphasis_0 "#c8a870"
+            emphasis_1 "#000000"
+            emphasis_2 "#000000"
+            emphasis_3 "#000000"
+        }
+        multiplayer_user_colors {
+            player_1 "#bc8490"
+            player_2 "#a18080"
+            player_3 "#000000"
+            player_4 "#c8a870"
+            player_5 "#a07864"
+            player_6 "#000000"
+            player_7 "#d47070"
+            player_8 "#000000"
+            player_9 "#000000"
+            player_10 "#000000"
+        }
+    }
+}
