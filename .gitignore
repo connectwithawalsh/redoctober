@@ -1,0 +1,23 @@
+# Generated theme files (ghostty/, zellij/, xcode/, ...) are committed on purpose:
+# users copy them straight from the repo. Only local noise is ignored here.
+
+# OS
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
+
+# Editors and IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Tool caches and local settings
+.rumdl_cache/
+.claude/settings.local.json
+
+# Installer backups and scratch files
+*.bak
+*.tmp
