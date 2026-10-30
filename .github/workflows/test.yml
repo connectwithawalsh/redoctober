@@ -1,0 +1,20 @@
+name: test
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    # macOS so the Xcode plist checks (plutil) run too
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: rhysd/action-setup-vim@v1
+        with:
+          neovim: true
+          version: stable
+      - name: Generated files are up to date
+        run: nvim -l scripts/generate.lua --check
+      - name: Tests
+        run: nvim -l scripts/test.lua
