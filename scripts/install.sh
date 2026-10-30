@@ -7,7 +7,7 @@
 #   --list, --dry-run  show what would happen, change nothing
 #   --link             symlink to this clone instead of copying
 #   --all              install for every app, even if it was not detected
-#   --only a,b         limit to: ghostty zellij yazi bat wezterm meli opencode claude xcode
+#   --only a,b         limit to: ghostty zellij yazi bat wezterm meli opencode claude lazygit xcode
 #
 # A different existing file is kept as <name>.bak. Starship is merge-only.
 set -eu
@@ -119,6 +119,12 @@ go meli meli && {
 go opencode opencode && {
   place opencode "$root/opencode/redoctober.json" "$cfg/opencode/themes/redoctober.json"
   note opencode 'set `"theme": "redoctober"` in tui.json'
+}
+
+go lazygit lazygit && {
+  lg_dir=$(lazygit --print-config-dir 2>/dev/null || true)
+  place lazygit "$root/lazygit/redoctober.yml" "${lg_dir:-$cfg/lazygit}/themes/redoctober.yml"
+  note lazygit 'merge the gui.theme block into config.yml, or set LG_CONFIG_FILE="<dir>/config.yml,<dir>/themes/redoctober.yml"'
 }
 
 go claude claude && {

@@ -249,6 +249,37 @@ test("xcode: .xccolortheme and .xcworkspacecolortheme agree under Xcode's migrat
   end
 end)
 
+-- Keys under gui.theme in lazygit's Config.md. lazygit's YAML loader ignores unknown keys silently.
+test("lazygit: only documented gui.theme keys, with palette colors", function()
+  local known_keys = {}
+  for _, k in ipairs {
+    "activeBorderColor", "inactiveBorderColor", "searchingActiveBorderColor", "optionsTextColor",
+    "selectedLineFgColor", "selectedLineBgColor", "inactiveViewSelectedLineBgColor",
+    "cherryPickedCommitFgColor", "cherryPickedCommitBgColor", "markedBaseCommitFgColor",
+    "markedBaseCommitBgColor", "unstagedChangesColor", "defaultFgColor", "authorColors", "branchColorPatterns",
+  } do
+    known_keys[k] = true
+  end
+  local known_hex = {}
+  for _, hex in pairs(values) do known_hex[hex] = true end
+
+  local content = gen.build()["lazygit/redoctober.yml"]
+  assert(content:find "^#.-\ngui:\n  theme:\n", "expected a gui.theme block")
+  local count = 0
+  for line in content:gmatch "[^\n]+" do
+    local key = line:match "^    (%w+):"
+    if key then
+      assert(known_keys[key], "unknown lazygit theme key: " .. key)
+      count = count + 1
+    end
+    for hex in line:gmatch "#%x%x%x%x%x%x" do
+      assert(known_hex[hex], hex .. " is not in the palette")
+    end
+    assert(not line:find "\t", "YAML must not contain tabs")
+  end
+  assert(count >= 12, "suspiciously few theme keys: " .. count)
+end)
+
 -- `ya pkg add` copies exactly these files out of redoctober.yazi/ and fails if any is missing
 -- (found by trial against ya 26.9; a missing LICENSE deletes the user's installed flavor).
 test("yazi: flavor folder has every file ya pkg add requires", function()
@@ -305,6 +336,7 @@ local function install(args, home)
     YAZI_CONFIG_HOME = home .. "/.config/yazi",
     ZELLIJ_CONFIG_DIR = home .. "/.config/zellij",
     CLAUDE_CONFIG_DIR = home .. "/.claude",
+    CONFIG_DIR = home .. "/.config/lazygit",
   }
   local cmd = { "sh", gen.root .. "/scripts/install.sh" }
   vim.list_extend(cmd, args)
@@ -336,6 +368,7 @@ test("install: --all copies every theme to its default directory", function()
   assert(same_file(gen.root .. "/meli/redoctober.toml", cfg .. "/meli/themes/redoctober.toml"), "meli")
   assert(same_file(gen.root .. "/opencode/redoctober.json", cfg .. "/opencode/themes/redoctober.json"), "opencode")
   assert(same_file(gen.root .. "/claude/redoctober.json", home .. "/.claude/themes/redoctober.json"), "claude")
+  assert(same_file(gen.root .. "/lazygit/redoctober.yml", cfg .. "/lazygit/themes/redoctober.yml"), "lazygit")
   if vim.uv.os_uname().sysname == "Darwin" then
     assert(same_file(gen.root .. "/xcode/redoctober.xccolortheme", home .. "/Library/Developer/Xcode/UserData/FontAndColorThemes/redoctober.xccolortheme"), "xcode")
   end

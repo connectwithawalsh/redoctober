@@ -1,0 +1,32 @@
+# redoctober for lazygit. Merge this gui.theme block into your config.yml, or load it
+# alongside your config: LG_CONFIG_FILE="<config dir>/config.yml,<config dir>/themes/redoctober.yml"
+gui:
+  theme:
+    activeBorderColor:
+      - '{{alarm}}'
+      - bold
+    inactiveBorderColor:
+      - '{{bulkhead}}'
+    searchingActiveBorderColor:
+      - '{{brass}}'
+      - bold
+    optionsTextColor:
+      - '{{steel}}'
+    selectedLineBgColor:
+      - '{{bezel}}'
+    inactiveViewSelectedLineBgColor:
+      - '{{panel}}'
+    cherryPickedCommitFgColor:
+      - '{{abyss}}'
+    cherryPickedCommitBgColor:
+      - '{{dusk}}'
+    markedBaseCommitFgColor:
+      - '{{abyss}}'
+    markedBaseCommitBgColor:
+      - '{{brass}}'
+    unstagedChangesColor:
+      - '{{alarm}}'
+    defaultFgColor:
+      - '{{chart}}'
+    authorColors:
+      '*': '{{steel}}'
