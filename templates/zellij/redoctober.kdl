@@ -1,0 +1,137 @@
+// Ported from dot_config/wezterm/colors/redoctober.lua and
+// dot_config/ghostty/themes/redoctober — same 16-color palette.
+//
+// This uses zellij's newer named-style theme schema instead of the old flat
+// fg/bg/black/red/... palette. That's required, not stylistic: zellij's KDL
+// parser treats a theme block as all-or-nothing — if every node name is one
+// of the old palette color names it uses the legacy derivation, otherwise it
+// switches entirely to named styles and falls back to generic defaults for
+// anything not spelled out here. The old palette's derivation always set
+// every *_selected component's background to the theme's plain `bg`
+// ({{abyss}}), which is the same as the normal pane background, so selection
+// highlights (pane text, session-manager list rows, table cells) had no
+// visible highlight at all. Every block below reproduces that same legacy
+// derivation exactly (see zellij-utils src/data.rs `impl From<Palette> for
+// Styling`), except text_selected/list_selected/table_cell_selected's
+// background, which now use the theme's `red` ({{alarm}}) so selection is
+// actually visible.
+themes {
+    redoctober {
+        text_unselected {
+            base "{{chart}}"
+            background "{{void}}"
+            emphasis_0 "{{brass}}"
+            emphasis_1 "{{copper}}"
+            emphasis_2 "{{sonar}}"
+            emphasis_3 "{{dusk}}"
+        }
+        text_selected {
+            base "{{chart}}"
+            background "{{alarm}}"
+            emphasis_0 "{{brass}}"
+            emphasis_1 "{{copper}}"
+            emphasis_2 "{{sonar}}"
+            emphasis_3 "{{dusk}}"
+        }
+        ribbon_unselected {
+            base "{{void}}"
+            background "{{chart}}"
+            emphasis_0 "{{alarm}}"
+            emphasis_1 "{{chart}}"
+            emphasis_2 "{{steel}}"
+            emphasis_3 "{{dusk}}"
+        }
+        ribbon_selected {
+            base "{{void}}"
+            background "{{sonar}}"
+            emphasis_0 "{{alarm}}"
+            emphasis_1 "{{brass}}"
+            emphasis_2 "{{dusk}}"
+            emphasis_3 "{{steel}}"
+        }
+        table_title {
+            base "{{sonar}}"
+            background "{{pitch}}"
+            emphasis_0 "{{brass}}"
+            emphasis_1 "{{copper}}"
+            emphasis_2 "{{sonar}}"
+            emphasis_3 "{{dusk}}"
+        }
+        table_cell_unselected {
+            base "{{chart}}"
+            background "{{void}}"
+            emphasis_0 "{{brass}}"
+            emphasis_1 "{{copper}}"
+            emphasis_2 "{{sonar}}"
+            emphasis_3 "{{dusk}}"
+        }
+        table_cell_selected {
+            base "{{chart}}"
+            background "{{alarm}}"
+            emphasis_0 "{{brass}}"
+            emphasis_1 "{{copper}}"
+            emphasis_2 "{{sonar}}"
+            emphasis_3 "{{dusk}}"
+        }
+        list_unselected {
+            base "{{chart}}"
+            background "{{void}}"
+            emphasis_0 "{{brass}}"
+            emphasis_1 "{{copper}}"
+            emphasis_2 "{{sonar}}"
+            emphasis_3 "{{dusk}}"
+        }
+        list_selected {
+            base "{{chart}}"
+            background "{{alarm}}"
+            emphasis_0 "{{brass}}"
+            emphasis_1 "{{copper}}"
+            emphasis_2 "{{sonar}}"
+            emphasis_3 "{{dusk}}"
+        }
+        frame_selected {
+            base "{{sonar}}"
+            background "{{pitch}}"
+            emphasis_0 "{{brass}}"
+            emphasis_1 "{{copper}}"
+            emphasis_2 "{{dusk}}"
+            emphasis_3 "{{pitch}}"
+        }
+        frame_highlight {
+            base "{{brass}}"
+            background "{{pitch}}"
+            emphasis_0 "{{dusk}}"
+            emphasis_1 "{{pitch}}"
+            emphasis_2 "{{brass}}"
+            emphasis_3 "{{brass}}"
+        }
+        exit_code_success {
+            base "{{sonar}}"
+            background "{{pitch}}"
+            emphasis_0 "{{copper}}"
+            emphasis_1 "{{void}}"
+            emphasis_2 "{{dusk}}"
+            emphasis_3 "{{steel}}"
+        }
+        exit_code_error {
+            base "{{alarm}}"
+            background "{{pitch}}"
+            emphasis_0 "{{brass}}"
+            emphasis_1 "{{pitch}}"
+            emphasis_2 "{{pitch}}"
+            emphasis_3 "{{pitch}}"
+        }
+        multiplayer_user_colors {
+            player_1 "{{dusk}}"
+            player_2 "{{steel}}"
+            player_3 "{{pitch}}"
+            player_4 "{{brass}}"
+            player_5 "{{copper}}"
+            player_6 "{{pitch}}"
+            player_7 "{{alarm}}"
+            player_8 "{{pitch}}"
+            player_9 "{{pitch}}"
+            player_10 "{{pitch}}"
+        }
+    }
+}

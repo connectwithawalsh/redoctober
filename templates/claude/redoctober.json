@@ -1,0 +1,60 @@
+{
+  "name": "redoctober",
+  "base": "dark",
+  "overrides": {
+    "claude": "{{alarm}}",
+    "claudeShimmer": "{{alarm_lit}}",
+    "text": "{{chart}}",
+    "inverseText": "{{abyss}}",
+    "inactive": "{{silt}}",
+    "inactiveShimmer": "{{fog}}",
+    "subtle": "{{bulkhead}}",
+    "suggestion": "{{dusk}}",
+    "permission": "{{steel}}",
+    "permissionShimmer": "{{dusk}}",
+    "remember": "{{copper}}",
+
+    "success": "{{sonar}}",
+    "error": "{{alarm}}",
+    "warning": "{{brass}}",
+    "warningShimmer": "{{flare}}",
+    "merged": "{{dusk}}",
+
+    "promptBorder": "{{silt}}",
+    "promptBorderShimmer": "{{fog}}",
+    "planMode": "{{steel}}",
+    "autoAccept": "{{sonar}}",
+    "bashBorder": "{{flare}}",
+    "ide": "{{steel}}",
+    "fastMode": "{{flare}}",
+    "fastModeShimmer": "{{brass}}",
+
+    "diffAdded": "{{tint.sonar}}",
+    "diffRemoved": "{{tint.alarm}}",
+    "diffAddedDimmed": "{{panel}}",
+    "diffRemovedDimmed": "{{panel}}",
+    "diffAddedWord": "{{bezel}}",
+    "diffRemovedWord": "{{bezel}}",
+
+    "userMessageBackground": "{{panel}}",
+    "userMessageBackgroundHover": "{{bezel}}",
+    "bashMessageBackgroundColor": "{{panel}}",
+    "memoryBackgroundColor": "{{panel}}",
+    "selectionBg": "{{tint.visual}}",
+    "composerSidebarBackground": "{{void}}",
+
+    "rate_limit_fill": "{{sonar}}",
+    "rate_limit_empty": "{{bezel}}",
+    "briefLabelYou": "{{steel}}",
+    "briefLabelClaude": "{{alarm}}",
+
+    "red_FOR_SUBAGENTS_ONLY": "{{alarm}}",
+    "blue_FOR_SUBAGENTS_ONLY": "{{steel}}",
+    "green_FOR_SUBAGENTS_ONLY": "{{sonar}}",
+    "yellow_FOR_SUBAGENTS_ONLY": "{{brass}}",
+    "purple_FOR_SUBAGENTS_ONLY": "{{dusk}}",
+    "orange_FOR_SUBAGENTS_ONLY": "{{flare}}",
+    "pink_FOR_SUBAGENTS_ONLY": "{{alarm_lit}}",
+    "cyan_FOR_SUBAGENTS_ONLY": "{{copper}}"
+  }
+}

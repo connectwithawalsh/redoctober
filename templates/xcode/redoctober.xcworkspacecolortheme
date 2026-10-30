@@ -1,0 +1,542 @@
+{
+  "fileVersion" : 1,
+  "recipe" : {
+    "background" : {
+      "customColor" : {
+        "chroma" : {
+          "exact" : {{role.bg|oklch_c}}
+        },
+        "gamut" : "P3",
+        "hue" : {
+          "radians" : {{role.bg|oklch_h}}
+        },
+        "lightness" : {
+          "exact" : {{role.bg|oklch_l}}
+        },
+        "opacity" : 1
+      }
+    },
+    "colorScheme" : "dark",
+    "palette" : {
+      "colorOverrides" : {
+        "comment" : {
+          "color" : {
+            "chroma" : {
+              "exact" : {{role.comment|oklch_c}}
+            },
+            "gamut" : "P3",
+            "hue" : {
+              "radians" : {{role.comment|oklch_h}}
+            },
+            "lightness" : {
+              "exact" : {{role.comment|oklch_l}}
+            },
+            "opacity" : 1
+          }
+        },
+        "currentLineHighlight" : {
+          "colorWithOpacity" : {
+            "chroma" : {
+              "exact" : {{role.surface|oklch_c}}
+            },
+            "gamut" : "P3",
+            "hue" : {
+              "radians" : {{role.surface|oklch_h}}
+            },
+            "lightness" : {
+              "exact" : {{role.surface|oklch_l}}
+            },
+            "opacity" : 1
+          }
+        },
+        "insertionPointColor" : {
+          "color" : {
+            "chroma" : {
+              "exact" : {{role.fg|oklch_c}}
+            },
+            "gamut" : "P3",
+            "hue" : {
+              "radians" : {{role.fg|oklch_h}}
+            },
+            "lightness" : {
+              "exact" : {{role.fg|oklch_l}}
+            },
+            "opacity" : 1
+          }
+        },
+        "invisibles" : {
+          "color" : {
+            "chroma" : {
+              "exact" : {{role.guide|oklch_c}}
+            },
+            "gamut" : "P3",
+            "hue" : {
+              "radians" : {{role.guide|oklch_h}}
+            },
+            "lightness" : {
+              "exact" : {{role.guide|oklch_l}}
+            },
+            "opacity" : 1
+          }
+        },
+        "keyword" : {
+          "color" : {
+            "chroma" : {
+              "exact" : {{role.keyword|oklch_c}}
+            },
+            "gamut" : "P3",
+            "hue" : {
+              "radians" : {{role.keyword|oklch_h}}
+            },
+            "lightness" : {
+              "exact" : {{role.keyword|oklch_l}}
+            },
+            "opacity" : 1
+          }
+        },
+        "keyword.attribute" : {
+          "color" : {
+            "chroma" : {
+              "exact" : {{role.keyword|oklch_c}}
+            },
+            "gamut" : "P3",
+            "hue" : {
+              "radians" : {{role.keyword|oklch_h}}
+            },
+            "lightness" : {
+              "exact" : {{role.keyword|oklch_l}}
+            },
+            "opacity" : 1
+          }
+        },
+        "link" : {
+          "color" : {
+            "chroma" : {
+              "exact" : {{role.info|oklch_c}}
+            },
+            "gamut" : "P3",
+            "hue" : {
+              "radians" : {{role.info|oklch_h}}
+            },
+            "lightness" : {
+              "exact" : {{role.info|oklch_l}}
+            },
+            "opacity" : 1
+          }
+        },
+        "markdown" : {
+          "color" : {
+            "chroma" : {
+              "exact" : {{role.fg|oklch_c}}
+            },
+            "gamut" : "P3",
+            "hue" : {
+              "radians" : {{role.fg|oklch_h}}
+            },
+            "lightness" : {
+              "exact" : {{role.fg|oklch_l}}
+            },
+            "opacity" : 1
+          }
+        },
+        "memberDeclaration" : {
+          "color" : {
+            "chroma" : {
+              "exact" : {{role.fg|oklch_c}}
+            },
+            "gamut" : "P3",
+            "hue" : {
+              "radians" : {{role.fg|oklch_h}}
+            },
+            "lightness" : {
+              "exact" : {{role.fg|oklch_l}}
+            },
+            "opacity" : 1
+          }
+        },
+        "number" : {
+          "color" : {
+            "chroma" : {
+              "exact" : {{role.number|oklch_c}}
+            },
+            "gamut" : "P3",
+            "hue" : {
+              "radians" : {{role.number|oklch_h}}
+            },
+            "lightness" : {
+              "exact" : {{role.number|oklch_l}}
+            },
+            "opacity" : 1
+          }
+        },
+        "number.character" : {
+          "color" : {
+            "chroma" : {
+              "exact" : {{role.string|oklch_c}}
+            },
+            "gamut" : "P3",
+            "hue" : {
+              "radians" : {{role.string|oklch_h}}
+            },
+            "lightness" : {
+              "exact" : {{role.string|oklch_l}}
+            },
+            "opacity" : 1
+          }
+        },
+        "otherMember" : {
+          "color" : {
+            "chroma" : {
+              "exact" : {{role.fg|oklch_c}}
+            },
+            "gamut" : "P3",
+            "hue" : {
+              "radians" : {{role.fg|oklch_h}}
+            },
+            "lightness" : {
+              "exact" : {{role.fg|oklch_l}}
+            },
+            "opacity" : 1
+          }
+        },
+        "otherMember.constant" : {
+          "color" : {
+            "chroma" : {
+              "exact" : {{role.constant|oklch_c}}
+            },
+            "gamut" : "P3",
+            "hue" : {
+              "radians" : {{role.constant|oklch_h}}
+            },
+            "lightness" : {
+              "exact" : {{role.constant|oklch_l}}
+            },
+            "opacity" : 1
+          }
+        },
+        "otherMember.function" : {
+          "color" : {
+            "chroma" : {
+              "exact" : {{role.function|oklch_c}}
+            },
+            "gamut" : "P3",
+            "hue" : {
+              "radians" : {{role.function|oklch_h}}
+            },
+            "lightness" : {
+              "exact" : {{role.function|oklch_l}}
+            },
+            "opacity" : 1
+          }
+        },
+        "otherMember.variable" : {
+          "color" : {
+            "chroma" : {
+              "exact" : {{role.identifier|oklch_c}}
+            },
+            "gamut" : "P3",
+            "hue" : {
+              "radians" : {{role.identifier|oklch_h}}
+            },
+            "lightness" : {
+              "exact" : {{role.identifier|oklch_l}}
+            },
+            "opacity" : 1
+          }
+        },
+        "otherType" : {
+          "color" : {
+            "chroma" : {
+              "exact" : {{role.type|oklch_c}}
+            },
+            "gamut" : "P3",
+            "hue" : {
+              "radians" : {{role.type|oklch_h}}
+            },
+            "lightness" : {
+              "exact" : {{role.type|oklch_l}}
+            },
+            "opacity" : 1
+          }
+        },
+        "otherType.class" : {
+          "color" : {
+            "chroma" : {
+              "exact" : {{role.type|oklch_c}}
+            },
+            "gamut" : "P3",
+            "hue" : {
+              "radians" : {{role.type|oklch_h}}
+            },
+            "lightness" : {
+              "exact" : {{role.type|oklch_l}}
+            },
+            "opacity" : 1
+          }
+        },
+        "otherType.type" : {
+          "color" : {
+            "chroma" : {
+              "exact" : {{role.type|oklch_c}}
+            },
+            "gamut" : "P3",
+            "hue" : {
+              "radians" : {{role.type|oklch_h}}
+            },
+            "lightness" : {
+              "exact" : {{role.type|oklch_l}}
+            },
+            "opacity" : 1
+          }
+        },
+        "plainText" : {
+          "color" : {
+            "chroma" : {
+              "exact" : {{role.fg|oklch_c}}
+            },
+            "gamut" : "P3",
+            "hue" : {
+              "radians" : {{role.fg|oklch_h}}
+            },
+            "lightness" : {
+              "exact" : {{role.fg|oklch_l}}
+            },
+            "opacity" : 1
+          }
+        },
+        "preprocessor" : {
+          "color" : {
+            "chroma" : {
+              "exact" : {{role.keyword|oklch_c}}
+            },
+            "gamut" : "P3",
+            "hue" : {
+              "radians" : {{role.keyword|oklch_h}}
+            },
+            "lightness" : {
+              "exact" : {{role.keyword|oklch_l}}
+            },
+            "opacity" : 1
+          }
+        },
+        "preprocessor.macro" : {
+          "color" : {
+            "chroma" : {
+              "exact" : {{role.keyword|oklch_c}}
+            },
+            "gamut" : "P3",
+            "hue" : {
+              "radians" : {{role.keyword|oklch_h}}
+            },
+            "lightness" : {
+              "exact" : {{role.keyword|oklch_l}}
+            },
+            "opacity" : 1
+          }
+        },
+        "preprocessor.macroSystem" : {
+          "color" : {
+            "chroma" : {
+              "exact" : {{role.keyword|oklch_c}}
+            },
+            "gamut" : "P3",
+            "hue" : {
+              "radians" : {{role.keyword|oklch_h}}
+            },
+            "lightness" : {
+              "exact" : {{role.keyword|oklch_l}}
+            },
+            "opacity" : 1
+          }
+        },
+        "projectMember" : {
+          "color" : {
+            "chroma" : {
+              "exact" : {{role.fg|oklch_c}}
+            },
+            "gamut" : "P3",
+            "hue" : {
+              "radians" : {{role.fg|oklch_h}}
+            },
+            "lightness" : {
+              "exact" : {{role.fg|oklch_l}}
+            },
+            "opacity" : 1
+          }
+        },
+        "projectMember.constant" : {
+          "color" : {
+            "chroma" : {
+              "exact" : {{role.constant|oklch_c}}
+            },
+            "gamut" : "P3",
+            "hue" : {
+              "radians" : {{role.constant|oklch_h}}
+            },
+            "lightness" : {
+              "exact" : {{role.constant|oklch_l}}
+            },
+            "opacity" : 1
+          }
+        },
+        "projectMember.function" : {
+          "color" : {
+            "chroma" : {
+              "exact" : {{role.function|oklch_c}}
+            },
+            "gamut" : "P3",
+            "hue" : {
+              "radians" : {{role.function|oklch_h}}
+            },
+            "lightness" : {
+              "exact" : {{role.function|oklch_l}}
+            },
+            "opacity" : 1
+          }
+        },
+        "projectMember.variable" : {
+          "color" : {
+            "chroma" : {
+              "exact" : {{role.identifier|oklch_c}}
+            },
+            "gamut" : "P3",
+            "hue" : {
+              "radians" : {{role.identifier|oklch_h}}
+            },
+            "lightness" : {
+              "exact" : {{role.identifier|oklch_l}}
+            },
+            "opacity" : 1
+          }
+        },
+        "projectType" : {
+          "color" : {
+            "chroma" : {
+              "exact" : {{role.type|oklch_c}}
+            },
+            "gamut" : "P3",
+            "hue" : {
+              "radians" : {{role.type|oklch_h}}
+            },
+            "lightness" : {
+              "exact" : {{role.type|oklch_l}}
+            },
+            "opacity" : 1
+          }
+        },
+        "projectType.class" : {
+          "color" : {
+            "chroma" : {
+              "exact" : {{role.type|oklch_c}}
+            },
+            "gamut" : "P3",
+            "hue" : {
+              "radians" : {{role.type|oklch_h}}
+            },
+            "lightness" : {
+              "exact" : {{role.type|oklch_l}}
+            },
+            "opacity" : 1
+          }
+        },
+        "projectType.type" : {
+          "color" : {
+            "chroma" : {
+              "exact" : {{role.type|oklch_c}}
+            },
+            "gamut" : "P3",
+            "hue" : {
+              "radians" : {{role.type|oklch_h}}
+            },
+            "lightness" : {
+              "exact" : {{role.type|oklch_l}}
+            },
+            "opacity" : 1
+          }
+        },
+        "selectedTextBackgroundColor" : {
+          "colorWithOpacity" : {
+            "chroma" : {
+              "exact" : {{role.selection|oklch_c}}
+            },
+            "gamut" : "P3",
+            "hue" : {
+              "radians" : {{role.selection|oklch_h}}
+            },
+            "lightness" : {
+              "exact" : {{role.selection|oklch_l}}
+            },
+            "opacity" : 1
+          }
+        },
+        "string" : {
+          "color" : {
+            "chroma" : {
+              "exact" : {{role.string|oklch_c}}
+            },
+            "gamut" : "P3",
+            "hue" : {
+              "radians" : {{role.string|oklch_h}}
+            },
+            "lightness" : {
+              "exact" : {{role.string|oklch_l}}
+            },
+            "opacity" : 1
+          }
+        },
+        "string.regex" : {
+          "color" : {
+            "chroma" : {
+              "exact" : {{role.string|oklch_c}}
+            },
+            "gamut" : "P3",
+            "hue" : {
+              "radians" : {{role.string|oklch_h}}
+            },
+            "lightness" : {
+              "exact" : {{role.string|oklch_l}}
+            },
+            "opacity" : 1
+          }
+        },
+        "typeDeclaration" : {
+          "color" : {
+            "chroma" : {
+              "exact" : {{role.type|oklch_c}}
+            },
+            "gamut" : "P3",
+            "hue" : {
+              "radians" : {{role.type|oklch_h}}
+            },
+            "lightness" : {
+              "exact" : {{role.type|oklch_l}}
+            },
+            "opacity" : 1
+          }
+        }
+      },
+      "primary" : {
+        "hue" : {
+          "intensity" : 0.177734375,
+          "radians" : {{role.accent|oklch_h}}
+        }
+      },
+      "secondary" : {
+        "custom" : {
+          "chroma" : {
+            "exact" : {{role.bg|oklch_c}}
+          },
+          "gamut" : "P3",
+          "hue" : {
+            "radians" : {{role.bg|oklch_h}}
+          },
+          "lightness" : {
+            "exact" : {{role.bg|oklch_l}}
+          },
+          "opacity" : 1
+        }
+      }
+    }
+  },
+  "showsInAllColorSchemes" : true
+}

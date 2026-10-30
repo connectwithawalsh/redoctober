@@ -1,0 +1,12 @@
+[palettes.redoctober]
+red = "{{alarm}}"
+orange = "{{flare}}"
+yellow = "{{brass}}"
+green = "{{sonar}}"
+aqua = "{{copper}}"
+blue = "{{steel}}"
+purple = "{{dusk}}"
+bg0 = "{{abyss}}"
+bg1 = "{{panel}}"
+bg2 = "{{bezel}}"
+fg = "{{chart}}"

@@ -1,0 +1,77 @@
+[terminal.themes.redoctober]
+"theme_default" = { fg = "{{chart}}", bg = "{{abyss}}", attrs = "Default" }
+"text.unfocused" = { fg = "{{silt}}" }
+"text.error" = { fg = "{{alarm}}" }
+"text.highlight" = { fg = "{{steel}}", attrs = "Reverse" }
+"error_message" = { fg = "{{alarm}}" }
+"highlight" = { fg = "{{abyss}}", bg = "{{chart}}", attrs = "Bold" }
+"status.bar" = { fg = "{{chart}}", bg = "{{bezel}}" }
+"status.command_bar" = { fg = "{{chart}}", bg = "{{panel}}" }
+"status.history" = { fg = "{{dusk}}", bg = "{{panel}}" }
+"status.history.hints" = { fg = "{{silt}}", bg = "{{panel}}" }
+"status.notification" = { fg = "{{dusk}}" }
+"tab.focused" = { fg = "{{chart}}", bg = "{{bezel}}" }
+"tab.unfocused" = { fg = "{{silt}}", bg = "{{panel}}" }
+"tab.bar" = { fg = "{{silt}}", bg = "{{abyss}}" }
+"widgets.list.header" = { fg = "{{abyss}}", bg = "{{sonar}}", attrs = "Bold" }
+"widgets.form.label" = { fg = "{{chart}}", attrs = "Bold" }
+"widgets.form.field" = { fg = "{{chart}}" }
+"widgets.form.highlighted" = { fg = "{{chart}}", bg = "{{bezel}}" }
+"widgets.options.highlighted" = { fg = "{{chart}}", bg = "{{bezel}}" }
+"mail.sidebar" = { fg = "{{chart}}", bg = "{{panel}}" }
+"mail.sidebar_divider" = { fg = "{{bezel}}", bg = "{{abyss}}" }
+"mail.sidebar_account_name" = { fg = "{{steel}}", attrs = "Bold" }
+"mail.sidebar_unread_count" = { fg = "{{brass}}" }
+"mail.sidebar_index" = { fg = "{{silt}}" }
+"mail.sidebar_highlighted" = { fg = "{{chart}}", bg = "{{bezel}}" }
+"mail.sidebar_highlighted_unread_count" = { fg = "{{brass}}" }
+"mail.sidebar_highlighted_index" = { fg = "{{silt}}" }
+"mail.sidebar_highlighted_account" = { fg = "{{chart}}", bg = "{{bezel}}" }
+"mail.sidebar_highlighted_account_name" = { fg = "{{steel}}", attrs = "Bold" }
+"mail.sidebar_highlighted_account_unread_count" = { fg = "{{brass}}" }
+"mail.sidebar_highlighted_account_index" = { fg = "{{silt}}" }
+"mail.view.divider" = { fg = "{{bezel}}" }
+"mail.view.headers" = { fg = "{{sonar}}" }
+"mail.view.headers_names" = { fg = "{{silt}}" }
+"mail.view.headers_area" = { fg = "{{chart}}" }
+"mail.view.body" = { fg = "{{chart}}" }
+"mail.view.thread.indentation.a" = { bg = "{{steel}}" }
+"mail.view.thread.indentation.b" = { bg = "{{alarm}}" }
+"mail.view.thread.indentation.c" = { bg = "{{dusk}}" }
+"mail.view.thread.indentation.d" = { bg = "{{brass}}" }
+"mail.view.thread.indentation.e" = { bg = "{{flare}}" }
+"mail.view.thread.indentation.f" = { bg = "{{sonar}}" }
+"mail.listing.compact.even" = { fg = "{{chart}}", bg = "{{abyss}}" }
+"mail.listing.compact.odd" = { fg = "{{chart}}", bg = "{{abyss}}" }
+"mail.listing.compact.even_unseen" = { fg = "{{brass}}", bg = "{{panel}}", attrs = "Bold" }
+"mail.listing.compact.odd_unseen" = { fg = "{{brass}}", bg = "{{panel}}", attrs = "Bold" }
+"mail.listing.compact.even_selected" = { fg = "{{chart}}", bg = "{{bezel}}" }
+"mail.listing.compact.odd_selected" = { fg = "{{chart}}", bg = "{{bezel}}" }
+"mail.listing.compact.even_highlighted" = { fg = "{{chart}}", bg = "{{bezel}}" }
+"mail.listing.compact.odd_highlighted" = { fg = "{{chart}}", bg = "{{bezel}}" }
+"mail.listing.compact.even_highlighted_selected" = { fg = "{{chart}}", bg = "{{bezel}}", attrs = "Reverse" }
+"mail.listing.compact.odd_highlighted_selected" = { fg = "{{chart}}", bg = "{{bezel}}", attrs = "Reverse" }
+"mail.listing.conversations" = { fg = "{{silt}}" }
+"mail.listing.conversations.subject" = { fg = "{{chart}}" }
+"mail.listing.conversations.from" = { fg = "{{silt}}" }
+"mail.listing.conversations.date" = { fg = "{{dusk}}" }
+"mail.listing.conversations.unseen" = { fg = "{{brass}}", bg = "{{panel}}", attrs = "Bold" }
+"mail.listing.conversations.highlighted" = { fg = "{{chart}}", bg = "{{bezel}}", attrs = "Bold" }
+"mail.listing.conversations.selected" = { fg = "{{chart}}", bg = "{{bezel}}" }
+"mail.listing.conversations.highlighted_selected" = { fg = "{{chart}}", bg = "{{bezel}}", attrs = "Reverse" }
+"mail.listing.plain.even" = { fg = "{{chart}}", bg = "{{abyss}}" }
+"mail.listing.plain.odd" = { fg = "{{chart}}", bg = "{{abyss}}" }
+"mail.listing.plain.even_unseen" = { fg = "{{brass}}", bg = "{{panel}}", attrs = "Bold" }
+"mail.listing.plain.odd_unseen" = { fg = "{{brass}}", bg = "{{panel}}", attrs = "Bold" }
+"mail.listing.plain.even_selected" = { fg = "{{chart}}", bg = "{{bezel}}" }
+"mail.listing.plain.odd_selected" = { fg = "{{chart}}", bg = "{{bezel}}" }
+"mail.listing.plain.even_highlighted" = { fg = "{{chart}}", bg = "{{bezel}}" }
+"mail.listing.plain.odd_highlighted" = { fg = "{{chart}}", bg = "{{bezel}}" }
+"mail.listing.plain.even_highlighted_selected" = { fg = "{{chart}}", bg = "{{bezel}}", attrs = "Reverse" }
+"mail.listing.plain.odd_highlighted_selected" = { fg = "{{chart}}", bg = "{{bezel}}", attrs = "Reverse" }
+"mail.listing.attachment_flag" = { fg = "{{silt}}" }
+"mail.listing.thread_snooze_flag" = { fg = "{{alarm}}" }
+"mail.listing.tag_default" = { fg = "{{abyss}}", bg = "{{sonar}}", attrs = "Bold" }
+"mail.listing.highlight_self" = { fg = "{{steel}}" }
+"pager.highlight_search" = { fg = "{{abyss}}", bg = "{{brass}}", attrs = "Bold" }
+"pager.highlight_search_current" = { fg = "{{abyss}}", bg = "{{flare}}", attrs = "Bold" }

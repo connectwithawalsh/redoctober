@@ -1,0 +1,62 @@
+[colors]
+foreground      = "{{chart}}"
+background      = "{{abyss}}"
+cursor_bg       = "{{alarm}}"
+cursor_border   = "{{alarm}}"
+cursor_fg       = "{{abyss}}"
+selection_bg    = "{{bezel}}"
+selection_fg    = "{{chart}}"
+scrollbar_thumb = "{{bezel}}"
+split           = "{{bezel}}"
+compose_cursor  = "{{alarm}}"
+
+ansi = [
+  "{{abyss}}",
+  "{{alarm}}",
+  "{{sonar}}",
+  "{{brass}}",
+  "{{steel}}",
+  "{{dusk}}",
+  "{{copper}}",
+  "{{chart}}",
+]
+
+brights = [
+  "{{bezel}}",
+  "{{alarm}}",
+  "{{sonar}}",
+  "{{brass}}",
+  "{{steel}}",
+  "{{dusk}}",
+  "{{copper}}",
+  "{{chart}}",
+]
+
+[colors.tab_bar]
+background = "{{abyss}}"
+
+[colors.tab_bar.active_tab]
+bg_color = "{{bezel}}"
+fg_color = "{{chart}}"
+
+[colors.tab_bar.inactive_tab]
+bg_color = "{{abyss}}"
+fg_color = "{{silt}}"
+
+[colors.tab_bar.inactive_tab_hover]
+bg_color = "{{panel}}"
+fg_color = "{{chart}}"
+
+[colors.tab_bar.new_tab]
+bg_color = "{{abyss}}"
+fg_color = "{{silt}}"
+
+[colors.tab_bar.new_tab_hover]
+bg_color = "{{bezel}}"
+fg_color = "{{chart}}"
+
+[metadata]
+aliases      = []
+author       = "Stephen Walsh"
+name         = "redoctober"
+origin_url   = "https://github.com/connectwithawalsh/redoctober"

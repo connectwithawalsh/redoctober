@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>redoctober</string>
+	<key>settings</key>
+	<array>
+		<!-- Global -->
+		<dict>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key><string>{{chart}}</string>
+				<key>background</key><string>{{abyss}}</string>
+				<key>caret</key><string>{{steel}}</string>
+				<key>selection</key><string>{{bezel}}</string>
+				<key>selectionForeground</key><string>{{chart}}</string>
+				<key>lineHighlight</key><string>{{panel}}</string>
+				<key>invisibles</key><string>{{bezel}}</string>
+				<key>gutter</key><string>{{abyss}}</string>
+				<key>gutterForeground</key><string>{{silt}}</string>
+			</dict>
+		</dict>
+
+		<!-- Comments -->
+		<dict>
+			<key>name</key><string>Comment</string>
+			<key>scope</key><string>comment, punctuation.definition.comment</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key><string>{{silt}}</string>
+				<key>fontStyle</key><string>italic</string>
+			</dict>
+		</dict>
+
+		<!-- Strings -->
+		<dict>
+			<key>name</key><string>String</string>
+			<key>scope</key><string>string, punctuation.definition.string</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key><string>{{sonar}}</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key><string>Regex</string>
+			<key>scope</key><string>string.regexp</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key><string>{{copper}}</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key><string>Escape</string>
+			<key>scope</key><string>constant.character.escape</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key><string>{{brass}}</string>
+			</dict>
+		</dict>
+
+		<!-- Numbers and constants -->
+		<dict>
+			<key>name</key><string>Number</string>
+			<key>scope</key><string>constant.numeric</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key><string>{{brass}}</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key><string>Constant</string>
+			<key>scope</key><string>constant, constant.language, support.constant</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key><string>{{brass}}</string>
+			</dict>
+		</dict>
+
+		<!-- Keywords -->
+		<dict>
+			<key>name</key><string>Keyword</string>
+			<key>scope</key><string>keyword, keyword.control, storage, storage.type, storage.modifier</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key><string>{{alarm}}</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key><string>Operator</string>
+			<key>scope</key><string>keyword.operator</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key><string>{{steel}}</string>
+			</dict>
+		</dict>
+
+		<!-- Functions -->
+		<dict>
+			<key>name</key><string>Function</string>
+			<key>scope</key><string>entity.name.function, support.function, meta.function-call</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key><string>{{dusk}}</string>
+			</dict>
+		</dict>
+
+		<!-- Types and classes -->
+		<dict>
+			<key>name</key><string>Type / Class</string>
+			<key>scope</key><string>entity.name.type, entity.name.class, entity.other.inherited-class, support.class, support.type</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key><string>{{brass}}</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key><string>Namespace / Module</string>
+			<key>scope</key><string>entity.name.namespace, entity.name.module</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key><string>{{copper}}</string>
+			</dict>
+		</dict>
+
+		<!-- Variables -->
+		<dict>
+			<key>name</key><string>Variable</string>
+			<key>scope</key><string>variable, variable.other</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key><string>{{chart}}</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key><string>Parameter</string>
+			<key>scope</key><string>variable.parameter</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key><string>{{steel}}</string>
+				<key>fontStyle</key><string>italic</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key><string>Language variable (this, self)</string>
+			<key>scope</key><string>variable.language</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key><string>{{alarm}}</string>
+				<key>fontStyle</key><string>italic</string>
+			</dict>
+		</dict>
+
+		<!-- Punctuation -->
+		<dict>
+			<key>name</key><string>Punctuation</string>
+			<key>scope</key><string>punctuation, meta.brace</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key><string>{{steel}}</string>
+			</dict>
+		</dict>
+
+		<!-- Tags and attributes (HTML/XML) -->
+		<dict>
+			<key>name</key><string>Tag</string>
+			<key>scope</key><string>entity.name.tag, meta.tag</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key><string>{{alarm}}</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key><string>Attribute</string>
+			<key>scope</key><string>entity.other.attribute-name</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key><string>{{brass}}</string>
+				<key>fontStyle</key><string>italic</string>
+			</dict>
+		</dict>
+
+		<!-- CSS -->
+		<dict>
+			<key>name</key><string>CSS property</string>
+			<key>scope</key><string>support.type.property-name, meta.property-name</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key><string>{{dusk}}</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key><string>CSS selector</string>
+			<key>scope</key><string>entity.other.attribute-name.class.css, entity.other.attribute-name.id.css, meta.selector</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key><string>{{brass}}</string>
+			</dict>
+		</dict>
+
+		<!-- Markdown -->
+		<dict>
+			<key>name</key><string>Markdown heading</string>
+			<key>scope</key><string>markup.heading, entity.name.section</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key><string>{{dusk}}</string>
+				<key>fontStyle</key><string>bold</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key><string>Markdown bold</string>
+			<key>scope</key><string>markup.bold</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key><string>{{brass}}</string>
+				<key>fontStyle</key><string>bold</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key><string>Markdown italic</string>
+			<key>scope</key><string>markup.italic</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key><string>{{steel}}</string>
+				<key>fontStyle</key><string>italic</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key><string>Markdown code</string>
+			<key>scope</key><string>markup.inline.raw, markup.raw, markup.fenced_code</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key><string>{{sonar}}</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key><string>Markdown link</string>
+			<key>scope</key><string>markup.underline.link, string.other.link</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key><string>{{copper}}</string>
+				<key>fontStyle</key><string>underline</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key><string>Markdown quote</string>
+			<key>scope</key><string>markup.quote</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key><string>{{silt}}</string>
+				<key>fontStyle</key><string>italic</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key><string>Markdown list</string>
+			<key>scope</key><string>markup.list, punctuation.definition.list</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key><string>{{alarm}}</string>
+			</dict>
+		</dict>
+
+		<!-- Diff -->
+		<dict>
+			<key>name</key><string>Diff inserted</string>
+			<key>scope</key><string>markup.inserted, meta.diff.header.to-file</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key><string>{{sonar}}</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key><string>Diff deleted</string>
+			<key>scope</key><string>markup.deleted, meta.diff.header.from-file</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key><string>{{alarm}}</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key><string>Diff changed</string>
+			<key>scope</key><string>markup.changed, meta.diff.range</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key><string>{{brass}}</string>
+			</dict>
+		</dict>
+
+		<!-- Preprocessor / decorators / macros -->
+		<dict>
+			<key>name</key><string>Preprocessor / Decorator</string>
+			<key>scope</key><string>meta.preprocessor, entity.name.function.preprocessor, meta.annotation, entity.name.function.decorator, support.function.macro</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key><string>{{copper}}</string>
+			</dict>
+		</dict>
+
+		<!-- Errors -->
+		<dict>
+			<key>name</key><string>Invalid</string>
+			<key>scope</key><string>invalid, invalid.illegal</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key><string>{{abyss}}</string>
+				<key>background</key><string>{{alarm}}</string>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>name</key><string>Deprecated</string>
+			<key>scope</key><string>invalid.deprecated</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key><string>{{abyss}}</string>
+				<key>background</key><string>{{brass}}</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,134 @@
+[mgr]
+cwd = { fg = "{{steel}}" }
+
+find_keyword = { fg = "{{brass}}", bold = true, italic = true, underline = true }
+find_position = { fg = "{{dusk}}", bold = true, italic = true }
+
+symlink_target = { italic = true }
+
+marker_copied = { fg = "{{sonar}}", bg = "{{sonar}}" }
+marker_cut = { fg = "{{alarm}}", bg = "{{alarm}}" }
+marker_marked = { fg = "{{steel}}", bg = "{{steel}}" }
+marker_selected = { fg = "{{brass}}", bg = "{{brass}}" }
+
+count_copied = { fg = "{{abyss}}", bg = "{{sonar}}" }
+count_cut = { fg = "{{abyss}}", bg = "{{alarm}}" }
+count_selected = { fg = "{{abyss}}", bg = "{{brass}}" }
+
+border_symbol = "│"
+border_style = { fg = "{{bezel}}" }
+
+[indicator]
+parent = { reversed = true }
+current = { reversed = true }
+preview = { underline = true }
+padding = { open = "", close = "" }
+
+[tabs]
+active = { bg = "{{bezel}}", bold = true }
+inactive = { fg = "{{silt}}", bg = "{{panel}}" }
+
+sep_inner = { open = "", close = "" }
+sep_outer = { open = "", close = "" }
+
+[mode]
+normal_main = { fg = "{{chart}}", bg = "{{bezel}}", bold = true }
+normal_alt = { fg = "{{steel}}", bg = "{{panel}}", bold = true }
+
+select_main = { fg = "{{abyss}}", bg = "{{sonar}}", bold = true }
+select_alt = { fg = "{{steel}}", bg = "{{panel}}", bold = true }
+
+unset_main = { fg = "{{abyss}}", bg = "{{steel}}", bold = true }
+unset_alt = { fg = "{{steel}}", bg = "{{panel}}", bold = true }
+
+[status]
+overall = {}
+sep_left = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+
+perm_sep = { fg = "{{silt}}" }
+perm_type = { fg = "{{sonar}}" }
+perm_read = { fg = "{{brass}}" }
+perm_write = { fg = "{{alarm}}" }
+perm_exec = { fg = "{{steel}}" }
+
+progress_label = { bold = true }
+progress_normal = { fg = "{{steel}}", bg = "{{panel}}" }
+progress_error = { fg = "{{alarm}}", bg = "{{panel}}" }
+
+[which]
+border = { fg = "{{steel}}" }
+cols = 3
+mask = { bg = "{{panel}}" }
+cand = { fg = "{{steel}}" }
+rest = { fg = "{{silt}}" }
+desc = { fg = "{{dusk}}" }
+separator = "  "
+separator_style = { fg = "{{panel}}" }
+
+[confirm]
+border = { fg = "{{steel}}" }
+title = { fg = "{{steel}}" }
+body = {}
+list = {}
+btn_yes = { reversed = true }
+btn_no = {}
+btn_labels = ["  [Y]es  ", "  (N)o  "]
+
+[spot]
+border = { fg = "{{steel}}" }
+title = { fg = "{{steel}}" }
+
+tbl_col = { fg = "{{steel}}" }
+tbl_cell = { fg = "{{brass}}", reversed = true }
+
+[notify]
+title_info = { fg = "{{sonar}}" }
+title_warn = { fg = "{{brass}}" }
+title_error = { fg = "{{alarm}}" }
+
+icon_info = ""
+icon_warn = ""
+icon_error = ""
+
+[pick]
+border = { fg = "{{steel}}" }
+active = { fg = "{{dusk}}", bold = true }
+inactive = {}
+
+[input]
+border = { fg = "{{steel}}" }
+title = {}
+value = {}
+selected = { reversed = true }
+
+[cmp]
+border = { fg = "{{steel}}" }
+active = { reversed = true }
+inactive = {}
+
+icon_file = ""
+icon_folder = ""
+icon_command = ""
+
+[tasks]
+border = { fg = "{{steel}}" }
+title = {}
+hovered = { fg = "{{dusk}}", underline = true }
+
+[help]
+border = { fg = "{{steel}}" }
+chord = { fg = "{{steel}}" }
+action = { fg = "{{dusk}}" }
+hovered = { reversed = true, bold = true }
+
+[filetype]
+
+rules = [
+  { mime = "**/image/*", fg = "{{brass}}" },
+  { mime = "**/{audio,video}/*", fg = "{{dusk}}" },
+  { mime = "**/application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "{{alarm}}" },
+  { mime = "**/application/{pdf,doc,rtf,vnd.*}", fg = "{{steel}}" },
+  { url = "*", fg = "{{copper}}" },
+  { url = "*/", fg = "{{alarm}}" },
+]

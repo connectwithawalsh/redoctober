@@ -1,0 +1,23 @@
+background = {{abyss}}
+foreground = {{chart}}
+cursor-color = {{chart}}
+cursor-text = {{abyss}}
+selection-background = {{alarm}}
+selection-foreground = {{chart}}
+
+palette = 0={{void}}
+palette = 1={{alarm}}
+palette = 2={{sonar}}
+palette = 3={{brass}}
+palette = 4={{steel}}
+palette = 5={{dusk}}
+palette = 6={{copper}}
+palette = 7={{fog}}
+palette = 8={{silt}}
+palette = 9={{alarm}}
+palette = 10={{sonar}}
+palette = 11={{brass}}
+palette = 12={{steel}}
+palette = 13={{dusk}}
+palette = 14={{copper}}
+palette = 15={{chart}}

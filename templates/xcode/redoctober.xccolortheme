@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DVTConsoleDebuggerInputTextColor</key>
+	<string>{{role.fg|xcode}}</string>
+	<key>DVTConsoleDebuggerInputTextFont</key>
+	<string>SFMono-Bold - 12.0</string>
+	<key>DVTConsoleDebuggerOutputTextColor</key>
+	<string>{{role.fg_dim|xcode}}</string>
+	<key>DVTConsoleDebuggerOutputTextFont</key>
+	<string>SFMono-Medium - 12.0</string>
+	<key>DVTConsoleDebuggerPromptTextColor</key>
+	<string>{{role.ok|xcode}}</string>
+	<key>DVTConsoleDebuggerPromptTextFont</key>
+	<string>SFMono-Bold - 12.0</string>
+	<key>DVTConsoleExectuableInputTextColor</key>
+	<string>{{role.fg|xcode}}</string>
+	<key>DVTConsoleExectuableInputTextFont</key>
+	<string>SFMono-Medium - 12.0</string>
+	<key>DVTConsoleExectuableOutputTextColor</key>
+	<string>{{role.fg_dim|xcode}}</string>
+	<key>DVTConsoleExectuableOutputTextFont</key>
+	<string>SFMono-Bold - 12.0</string>
+	<key>DVTConsoleTextBackgroundColor</key>
+	<string>{{role.bg|xcode}}</string>
+	<key>DVTConsoleTextInsertionPointColor</key>
+	<string>{{role.fg|xcode}}</string>
+	<key>DVTConsoleTextSelectionColor</key>
+	<string>{{role.selection|xcode}}</string>
+	<key>DVTDebuggerInstructionPointerColor</key>
+	<string>{{role.warning_bg|xcode}}</string>
+	<key>DVTFontAndColorVersion</key>
+	<integer>1</integer>
+	<key>DVTLineSpacing</key>
+	<real>1.1000000238418579</real>
+	<key>DVTMarkupTextBackgroundColor</key>
+	<string>{{role.surface|xcode}}</string>
+	<key>DVTMarkupTextBorderColor</key>
+	<string>{{role.border|xcode}}</string>
+	<key>DVTMarkupTextCodeFont</key>
+	<string>SFMono-Regular - 10.0</string>
+	<key>DVTMarkupTextEmphasisColor</key>
+	<string>{{role.fg|xcode}}</string>
+	<key>DVTMarkupTextEmphasisFont</key>
+	<string>.AppleSystemUIFontItalic - 10.0</string>
+	<key>DVTMarkupTextInlineCodeColor</key>
+	<string>{{role.fg_dim|xcode}}</string>
+	<key>DVTMarkupTextLinkColor</key>
+	<string>{{role.info|xcode}}</string>
+	<key>DVTMarkupTextLinkFont</key>
+	<string>.AppleSystemUIFont - 10.0</string>
+	<key>DVTMarkupTextNormalColor</key>
+	<string>{{role.fg|xcode}}</string>
+	<key>DVTMarkupTextNormalFont</key>
+	<string>.AppleSystemUIFont - 10.0</string>
+	<key>DVTMarkupTextOtherHeadingColor</key>
+	<string>{{role.fg_dim|xcode}}</string>
+	<key>DVTMarkupTextOtherHeadingFont</key>
+	<string>.AppleSystemUIFont - 14.0</string>
+	<key>DVTMarkupTextPrimaryHeadingColor</key>
+	<string>{{role.fg|xcode}}</string>
+	<key>DVTMarkupTextPrimaryHeadingFont</key>
+	<string>.AppleSystemUIFont - 24.0</string>
+	<key>DVTMarkupTextSecondaryHeadingColor</key>
+	<string>{{role.fg|xcode}}</string>
+	<key>DVTMarkupTextSecondaryHeadingFont</key>
+	<string>.AppleSystemUIFont - 18.0</string>
+	<key>DVTMarkupTextStrongColor</key>
+	<string>{{role.fg|xcode}}</string>
+	<key>DVTMarkupTextStrongFont</key>
+	<string>.AppleSystemUIFontBold - 10.0</string>
+	<key>DVTScrollbarMarkerAnalyzerColor</key>
+	<string>{{role.info|xcode}}</string>
+	<key>DVTScrollbarMarkerBreakpointColor</key>
+	<string>{{role.hint|xcode}}</string>
+	<key>DVTScrollbarMarkerDiffColor</key>
+	<string>{{role.comment|xcode}}</string>
+	<key>DVTScrollbarMarkerDiffConflictColor</key>
+	<string>{{role.error|xcode}}</string>
+	<key>DVTScrollbarMarkerErrorColor</key>
+	<string>{{role.error|xcode}}</string>
+	<key>DVTScrollbarMarkerRuntimeIssueColor</key>
+	<string>{{copper|xcode}}</string>
+	<key>DVTScrollbarMarkerWarningColor</key>
+	<string>{{role.warning|xcode}}</string>
+	<key>DVTSourceTextBackground</key>
+	<string>{{role.bg|xcode}}</string>
+	<key>DVTSourceTextBlockDimBackgroundColor</key>
+	<string>{{role.surface|xcode}}</string>
+	<key>DVTSourceTextCurrentLineHighlightColor</key>
+	<string>{{role.surface|xcode}}</string>
+	<key>DVTSourceTextInsertionPointColor</key>
+	<string>{{role.fg|xcode}}</string>
+	<key>DVTSourceTextInvisiblesColor</key>
+	<string>{{role.guide|xcode}}</string>
+	<key>DVTSourceTextSelectionColor</key>
+	<string>{{role.selection|xcode}}</string>
+	<key>DVTSourceTextSyntaxColors</key>
+	<dict>
+		<key>xcode.syntax.attribute</key>
+		<string>{{role.keyword|xcode}}</string>
+		<key>xcode.syntax.character</key>
+		<string>{{role.string|xcode}}</string>
+		<key>xcode.syntax.comment</key>
+		<string>{{role.comment|xcode}}</string>
+		<key>xcode.syntax.comment.doc</key>
+		<string>{{role.comment|xcode}}</string>
+		<key>xcode.syntax.comment.doc.keyword</key>
+		<string>{{role.fg_dim|xcode}}</string>
+		<key>xcode.syntax.declaration.other</key>
+		<string>{{role.fg|xcode}}</string>
+		<key>xcode.syntax.declaration.type</key>
+		<string>{{role.type|xcode}}</string>
+		<key>xcode.syntax.identifier.class</key>
+		<string>{{role.type|xcode}}</string>
+		<key>xcode.syntax.identifier.class.system</key>
+		<string>{{role.type|xcode}}</string>
+		<key>xcode.syntax.identifier.constant</key>
+		<string>{{role.constant|xcode}}</string>
+		<key>xcode.syntax.identifier.constant.system</key>
+		<string>{{role.constant|xcode}}</string>
+		<key>xcode.syntax.identifier.function</key>
+		<string>{{role.function|xcode}}</string>
+		<key>xcode.syntax.identifier.function.system</key>
+		<string>{{role.function|xcode}}</string>
+		<key>xcode.syntax.identifier.macro</key>
+		<string>{{role.keyword|xcode}}</string>
+		<key>xcode.syntax.identifier.macro.system</key>
+		<string>{{role.keyword|xcode}}</string>
+		<key>xcode.syntax.identifier.type</key>
+		<string>{{role.type|xcode}}</string>
+		<key>xcode.syntax.identifier.type.system</key>
+		<string>{{role.type|xcode}}</string>
+		<key>xcode.syntax.identifier.variable</key>
+		<string>{{role.identifier|xcode}}</string>
+		<key>xcode.syntax.identifier.variable.system</key>
+		<string>{{role.identifier|xcode}}</string>
+		<key>xcode.syntax.keyword</key>
+		<string>{{role.keyword|xcode}}</string>
+		<key>xcode.syntax.mark</key>
+		<string>{{role.fg_dim|xcode}}</string>
+		<key>xcode.syntax.markup.aside.kind</key>
+		<string>{{role.fg_dim|xcode}}</string>
+		<key>xcode.syntax.markup.code</key>
+		<string>{{role.special|xcode}}</string>
+		<key>xcode.syntax.number</key>
+		<string>{{role.number|xcode}}</string>
+		<key>xcode.syntax.plain</key>
+		<string>{{role.fg|xcode}}</string>
+		<key>xcode.syntax.preprocessor</key>
+		<string>{{role.keyword|xcode}}</string>
+		<key>xcode.syntax.string</key>
+		<string>{{role.string|xcode}}</string>
+		<key>xcode.syntax.url</key>
+		<string>{{role.special|xcode}}</string>
+	</dict>
+	<key>DVTSourceTextSyntaxFonts</key>
+	<dict>
+		<key>xcode.syntax.attribute</key>
+		<string>SFMono-Bold - 12.0</string>
+		<key>xcode.syntax.character</key>
+		<string>SFMono-MediumItalic - 12.0</string>
+		<key>xcode.syntax.comment</key>
+		<string>SFMono-MediumItalic - 12.0</string>
+		<key>xcode.syntax.comment.doc</key>
+		<string>SFMono-MediumItalic - 12.0</string>
+		<key>xcode.syntax.comment.doc.keyword</key>
+		<string>SFMono-MediumItalic - 12.0</string>
+		<key>xcode.syntax.declaration.other</key>
+		<string>SFMono-Medium - 12.0</string>
+		<key>xcode.syntax.declaration.type</key>
+		<string>SFMono-MediumItalic - 12.0</string>
+		<key>xcode.syntax.identifier.class</key>
+		<string>SFMono-MediumItalic - 12.0</string>
+		<key>xcode.syntax.identifier.class.system</key>
+		<string>SFMono-MediumItalic - 12.0</string>
+		<key>xcode.syntax.identifier.constant</key>
+		<string>SFMono-MediumItalic - 12.0</string>
+		<key>xcode.syntax.identifier.constant.system</key>
+		<string>SFMono-MediumItalic - 12.0</string>
+		<key>xcode.syntax.identifier.function</key>
+		<string>SFMono-Medium - 12.0</string>
+		<key>xcode.syntax.identifier.function.system</key>
+		<string>SFMono-Medium - 12.0</string>
+		<key>xcode.syntax.identifier.macro</key>
+		<string>SFMono-Bold - 12.0</string>
+		<key>xcode.syntax.identifier.macro.system</key>
+		<string>SFMono-Bold - 12.0</string>
+		<key>xcode.syntax.identifier.type</key>
+		<string>SFMono-MediumItalic - 12.0</string>
+		<key>xcode.syntax.identifier.type.system</key>
+		<string>SFMono-MediumItalic - 12.0</string>
+		<key>xcode.syntax.identifier.variable</key>
+		<string>SFMono-Medium - 12.0</string>
+		<key>xcode.syntax.identifier.variable.system</key>
+		<string>SFMono-Medium - 12.0</string>
+		<key>xcode.syntax.keyword</key>
+		<string>SFMono-Bold - 12.0</string>
+		<key>xcode.syntax.mark</key>
+		<string>SFMono-Bold - 12.0</string>
+		<key>xcode.syntax.markup.aside.kind</key>
+		<string>SFMono-Bold - 12.0</string>
+		<key>xcode.syntax.markup.code</key>
+		<string>SFMono-Medium - 12.0</string>
+		<key>xcode.syntax.number</key>
+		<string>SFMono-Medium - 12.0</string>
+		<key>xcode.syntax.plain</key>
+		<string>SFMono-Medium - 12.0</string>
+		<key>xcode.syntax.preprocessor</key>
+		<string>SFMono-Bold - 12.0</string>
+		<key>xcode.syntax.string</key>
+		<string>SFMono-MediumItalic - 12.0</string>
+		<key>xcode.syntax.url</key>
+		<string>SFMono-Medium - 12.0</string>
+	</dict>
+</dict>
+</plist>
