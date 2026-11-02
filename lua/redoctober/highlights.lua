@@ -198,6 +198,8 @@ function M.groups(p)
     Visual = { bg = r.selection },
     Search = { fg = r.fg, bg = hot },
     IncSearch = { fg = r.bg, bg = c.dusk, bold = true },
+    -- fg, not bg: snacks.lazygit reads MatchParen's fg for its active border
+    MatchParen = { fg = r.accent, bold = true },
     Pmenu = { bg = r.surface },
     PmenuSel = { bg = r.border },
     PmenuSbar = { bg = r.guide },

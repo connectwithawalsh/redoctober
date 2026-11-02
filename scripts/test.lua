@@ -450,6 +450,7 @@ test("plugin: colorscheme loads with no zenbones or lush", function()
   assert(hex(hl("Type").fg) == values.copper and hl("Type").italic, "Type")
   assert(hex(hl("@keyword.return").fg) == values.alarm, "treesitter keyword links to Statement")
   assert(hex(hl("@variable").fg) ~= "#e0e2ea", "@variable fell back to Neovim's default")
+  assert(hl("MatchParen").fg and hex(hl("MatchParen").fg) == values.alarm, "MatchParen fg (snacks.lazygit border)")
   assert(vim.g.terminal_color_1 == values.alarm, "terminal red")
 end)
 
