@@ -341,6 +341,22 @@ test("pi: valid theme, every color is a var or palette hex", function()
   end
 end)
 
+test("obsidian: valid manifest, theme.css fully resolved and on-palette", function()
+  local built = gen.build()
+  local manifest = vim.json.decode(built["obsidian/manifest.json"])
+  for _, k in ipairs { "name", "version", "minAppVersion", "author" } do
+    assert(manifest[k], "manifest missing " .. k)
+  end
+  local css = built["obsidian/theme.css"]
+  assert(not css:find "{{", "unresolved placeholder")
+  local known = {}
+  for _, hex in pairs(values) do known[hex] = true end
+  for hex in css:gmatch "#%x%x%x%x%x%x" do
+    assert(known[hex:lower()], hex .. " is not in the palette")
+  end
+  assert(css:find("--background-primary: var(--ro-abyss)", 1, true), "background not set")
+end)
+
 -- Installer (always run against a sandbox home; env vars keep app tools out of the real config)
 local function install(args, home)
   local env = {
@@ -353,6 +369,7 @@ local function install(args, home)
     ZELLIJ_CONFIG_DIR = home .. "/.config/zellij",
     CLAUDE_CONFIG_DIR = home .. "/.claude",
     PI_CODING_AGENT_DIR = home .. "/.pi/agent",
+    OBSIDIAN_VAULT = home .. "/vault",
   }
   local cmd = { "sh", gen.root .. "/scripts/install.sh" }
   vim.list_extend(cmd, args)
@@ -372,6 +389,7 @@ end
 
 test("install: --all copies every theme to its default directory", function()
   local home = sandbox()
+  vim.fn.mkdir(home .. "/vault", "p")
   local code, out = install({ "--all" }, home)
   assert(code == 0, out)
   local cfg = home .. "/.config"
@@ -385,6 +403,9 @@ test("install: --all copies every theme to its default directory", function()
   assert(same_file(gen.root .. "/opencode/redoctober.json", cfg .. "/opencode/themes/redoctober.json"), "opencode")
   assert(same_file(gen.root .. "/claude/redoctober.json", home .. "/.claude/themes/redoctober.json"), "claude")
   assert(same_file(gen.root .. "/pi/redoctober.json", home .. "/.pi/agent/themes/redoctober.json"), "pi")
+  local vault_theme = home .. "/vault/.obsidian/themes/Red October"
+  assert(same_file(gen.root .. "/obsidian/theme.css", vault_theme .. "/theme.css"), "obsidian theme.css")
+  assert(same_file(gen.root .. "/obsidian/manifest.json", vault_theme .. "/manifest.json"), "obsidian manifest")
   if vim.uv.os_uname().sysname == "Darwin" then
     assert(same_file(gen.root .. "/xcode/redoctober.xccolortheme", home .. "/Library/Developer/Xcode/UserData/FontAndColorThemes/redoctober.xccolortheme"), "xcode")
   end

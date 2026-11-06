@@ -7,7 +7,7 @@
 #   --list, --dry-run  show what would happen, change nothing
 #   --link             symlink to this clone instead of copying
 #   --all              install for every app, even if it was not detected
-#   --only a,b         limit to: ghostty zellij yazi bat wezterm meli opencode claude pi xcode
+#   --only a,b         limit to: ghostty zellij yazi bat wezterm meli opencode claude pi obsidian xcode
 #
 # A different existing file is kept as <name>.bak. Starship and lazygit are merge-only:
 # neither can import a theme file, so the script only tells you what to do.
@@ -130,6 +130,18 @@ go claude claude && {
 go pi pi && {
   place pi "$root/pi/redoctober.json" "${PI_CODING_AGENT_DIR:-$HOME/.pi/agent}/themes/redoctober.json"
   note pi 'run /settings and pick the redoctober theme (or set `"theme": "redoctober"` in settings.json)'
+}
+
+# Obsidian themes live inside a vault, so the vault has to be named: OBSIDIAN_VAULT=/path/to/vault
+go obsidian /Applications/Obsidian.app obsidian && {
+  if [ -n "${OBSIDIAN_VAULT:-}" ] && [ ! -d "$OBSIDIAN_VAULT" ]; then
+    echo "obsidian: OBSIDIAN_VAULT=$OBSIDIAN_VAULT is not a folder, nothing installed" >&2
+  elif [ -n "${OBSIDIAN_VAULT:-}" ]; then
+    place obsidian "$root/obsidian" "$OBSIDIAN_VAULT/.obsidian/themes/Red October"
+    note obsidian 'open Settings > Appearance, set the base color scheme to Dark, and pick Red October under Themes'
+  else
+    note obsidian "set OBSIDIAN_VAULT=/path/to/your/vault and re-run, or copy $root/obsidian to <vault>/.obsidian/themes/Red October"
+  fi
 }
 
 if [ "$(uname)" = Darwin ]; then

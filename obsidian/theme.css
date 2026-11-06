@@ -1,0 +1,237 @@
+/* Red October for Obsidian. Dark only: set Settings > Appearance > Base color scheme to Dark.
+   Generated from palette.toml by scripts/generate.lua. Edit templates/obsidian/theme.css. */
+
+.theme-dark {
+  /* Palette */
+  --ro-void: #141414;
+  --ro-abyss: #1a1818;
+  --ro-panel: #282020;
+  --ro-bezel: #382828;
+  --ro-bulkhead: #443030;
+  --ro-rivet: #4e3434;
+  --ro-chart: #dac8b8;
+  --ro-fog: #a09088;
+  --ro-silt: #786866;
+  --ro-alarm: #d47070;
+  --ro-alarm-lit: #e08080;
+  --ro-flare: #cc8060;
+  --ro-brass: #c8a870;
+  --ro-sonar: #879a80;
+  --ro-copper: #a07864;
+  --ro-steel: #a18080;
+  --ro-dusk: #bc8490;
+  --ro-tint-visual: #3c2424;
+  --ro-tint-alarm: #3e2020;
+  --ro-tint-sonar: #242e20;
+  --ro-tint-brass: #2e2a1a;
+
+  color-scheme: dark;
+
+  /* Backgrounds */
+  --color-base-00: var(--ro-void);
+  --color-base-05: var(--ro-void);
+  --color-base-10: var(--ro-abyss);
+  --color-base-20: var(--ro-panel);
+  --color-base-25: var(--ro-bezel);
+  --color-base-30: var(--ro-bulkhead);
+  --color-base-35: var(--ro-rivet);
+  --color-base-40: var(--ro-silt);
+  --color-base-50: var(--ro-silt);
+  --color-base-60: var(--ro-fog);
+  --color-base-70: var(--ro-fog);
+  --color-base-100: var(--ro-chart);
+
+  --background-primary: var(--ro-abyss);
+  --background-primary-alt: var(--ro-panel);
+  --background-secondary: var(--ro-panel);
+  --background-modifier-hover: var(--ro-bezel);
+  --background-modifier-active-hover: var(--ro-bulkhead);
+  --background-modifier-border: var(--ro-bulkhead);
+  --background-modifier-border-hover: var(--ro-rivet);
+  --background-modifier-border-focus: var(--ro-alarm);
+  --background-modifier-form-field: var(--ro-panel);
+  --background-modifier-cover: color-mix(in srgb, var(--ro-void) 80%, transparent);
+  --background-modifier-error: var(--ro-tint-alarm);
+  --background-modifier-error-hover: var(--ro-alarm);
+  --background-modifier-success: var(--ro-tint-sonar);
+  --background-modifier-message: var(--ro-bezel);
+
+  /* Text */
+  --text-normal: var(--ro-chart);
+  --text-muted: var(--ro-fog);
+  --text-faint: var(--ro-silt);
+  --text-on-accent: var(--ro-abyss);
+  --text-on-accent-inverted: var(--ro-abyss);
+  --text-error: var(--ro-alarm);
+  --text-warning: var(--ro-brass);
+  --text-success: var(--ro-sonar);
+  --text-accent: var(--ro-alarm);
+  --text-accent-hover: var(--ro-alarm-lit);
+  --text-selection: var(--ro-tint-visual);
+  --text-highlight-bg: color-mix(in srgb, var(--ro-brass) 28%, transparent);
+
+  /* Accent: red */
+  --accent-h: 0;
+  --accent-s: 55%;
+  --accent-l: 63%;
+  --interactive-accent: var(--ro-alarm);
+  --interactive-accent-hover: var(--ro-alarm-lit);
+  --interactive-normal: var(--ro-bezel);
+  --interactive-hover: var(--ro-bulkhead);
+
+  /* Headings: red, getting quieter as they go down */
+  --h1-color: var(--ro-alarm);
+  --h2-color: var(--ro-alarm);
+  --h3-color: var(--ro-copper);
+  --h4-color: var(--ro-copper);
+  --h5-color: var(--ro-fog);
+  --h6-color: var(--ro-silt);
+  --bold-color: var(--ro-chart);
+  --italic-color: var(--ro-chart);
+
+  /* Links */
+  --link-color: var(--ro-steel);
+  --link-color-hover: var(--ro-alarm-lit);
+  --link-unresolved-color: var(--ro-silt);
+  --link-external-color: var(--ro-steel);
+  --link-external-color-hover: var(--ro-alarm-lit);
+  --tag-color: var(--ro-copper);
+  --tag-background: var(--ro-panel);
+  --tag-background-hover: var(--ro-bezel);
+
+  /* Code: near-monochrome, keywords red and types copper */
+  --code-background: var(--ro-panel);
+  --code-normal: var(--ro-fog);
+  --code-comment: var(--ro-silt);
+  --code-punctuation: var(--ro-fog);
+  --code-keyword: var(--ro-alarm);
+  --code-function: var(--ro-chart);
+  --code-operator: var(--ro-chart);
+  --code-important: var(--ro-flare);
+  --code-property: var(--ro-chart);
+  --code-tag: var(--ro-alarm);
+  --code-value: var(--ro-fog);
+  --code-string: var(--ro-fog);
+
+  /* Blocks */
+  --blockquote-border-color: var(--ro-alarm);
+  --blockquote-color: var(--ro-fog);
+  --hr-color: var(--ro-bulkhead);
+  --list-marker-color: var(--ro-alarm);
+  --list-marker-color-hover: var(--ro-alarm-lit);
+  --list-marker-color-collapsed: var(--ro-alarm);
+  --checkbox-color: var(--ro-alarm);
+  --checkbox-color-hover: var(--ro-alarm-lit);
+  --checkbox-border-color: var(--ro-silt);
+  --checkbox-border-color-hover: var(--ro-fog);
+  --table-border-color: var(--ro-bulkhead);
+  --table-header-background: var(--ro-panel);
+  --table-header-color: var(--ro-chart);
+  --table-row-alt-background: var(--ro-panel);
+  --indentation-guide-color: var(--ro-bulkhead);
+  --indentation-guide-color-active: var(--ro-silt);
+
+  /* Chrome */
+  --titlebar-background: var(--ro-void);
+  --titlebar-background-focused: var(--ro-void);
+  --titlebar-text-color: var(--ro-silt);
+  --titlebar-text-color-focused: var(--ro-fog);
+  --tab-text-color: var(--ro-silt);
+  --tab-text-color-focused: var(--ro-fog);
+  --tab-text-color-focused-active: var(--ro-chart);
+  --tab-text-color-focused-active-current: var(--ro-chart);
+  --tab-background-active: var(--ro-abyss);
+  --tab-divider-color: var(--ro-bulkhead);
+  --ribbon-background: var(--ro-void);
+  --ribbon-background-collapsed: var(--ro-abyss);
+  --status-bar-background: var(--ro-void);
+  --status-bar-border-color: var(--ro-bulkhead);
+  --status-bar-text-color: var(--ro-silt);
+  --nav-item-color: var(--ro-fog);
+  --nav-item-color-hover: var(--ro-chart);
+  --nav-item-color-active: var(--ro-chart);
+  --nav-item-color-selected: var(--ro-chart);
+  --nav-item-background-hover: var(--ro-bezel);
+  --nav-item-background-active: var(--ro-bezel);
+  --nav-item-background-selected: var(--ro-tint-visual);
+  --nav-collapse-icon-color: var(--ro-silt);
+  --nav-collapse-icon-color-collapsed: var(--ro-silt);
+  --icon-color: var(--ro-fog);
+  --icon-color-hover: var(--ro-chart);
+  --icon-color-active: var(--ro-alarm);
+  --icon-color-focused: var(--ro-chart);
+  --scrollbar-bg: transparent;
+  --scrollbar-thumb-bg: var(--ro-bulkhead);
+  --scrollbar-active-thumb-bg: var(--ro-rivet);
+  --divider-color: var(--ro-bulkhead);
+  --divider-color-hover: var(--ro-alarm);
+  --prompt-border-color: var(--ro-bulkhead);
+  --modal-border-color: var(--ro-bulkhead);
+  --input-shadow: inset 0 0 0 1px var(--ro-bulkhead);
+  --input-shadow-hover: inset 0 0 0 1px var(--ro-rivet);
+  --shadow-s: 0 1px 3px rgb(0 0 0 / 0.5);
+  --shadow-l: 0 8px 24px rgb(0 0 0 / 0.6);
+
+  /* Graph */
+  --graph-line: var(--ro-bulkhead);
+  --graph-node: var(--ro-fog);
+  --graph-node-unresolved: var(--ro-silt);
+  --graph-node-focused: var(--ro-alarm);
+  --graph-node-tag: var(--ro-copper);
+  --graph-node-attachment: var(--ro-brass);
+  --graph-text: var(--ro-fog);
+
+  /* Canvas */
+  --canvas-background: var(--ro-abyss);
+  --canvas-dot-pattern: var(--ro-bulkhead);
+  --canvas-color-1: var(--ro-alarm);
+  --canvas-color-2: var(--ro-flare);
+  --canvas-color-3: var(--ro-brass);
+  --canvas-color-4: var(--ro-sonar);
+  --canvas-color-5: var(--ro-steel);
+  --canvas-color-6: var(--ro-dusk);
+
+  /* Named colors the app and plugins draw from */
+  --color-red: var(--ro-alarm);
+  --color-orange: var(--ro-flare);
+  --color-yellow: var(--ro-brass);
+  --color-green: var(--ro-sonar);
+  --color-cyan: var(--ro-copper);
+  --color-blue: var(--ro-steel);
+  --color-purple: var(--ro-dusk);
+  --color-pink: var(--ro-dusk);
+}
+
+/* Callouts: red is reserved for danger, the rest stay in the palette */
+.theme-dark .callout {
+  --callout-color: 160, 144, 136;
+  background-color: var(--ro-panel);
+  border: 1px solid var(--ro-bulkhead);
+  border-left: 3px solid rgb(var(--callout-color));
+}
+.theme-dark .callout[data-callout="note"],
+.theme-dark .callout[data-callout="info"],
+.theme-dark .callout[data-callout="todo"] { --callout-color: 161, 128, 128; }
+.theme-dark .callout[data-callout="tip"],
+.theme-dark .callout[data-callout="success"],
+.theme-dark .callout[data-callout="check"],
+.theme-dark .callout[data-callout="done"] { --callout-color: 135, 154, 128; }
+.theme-dark .callout[data-callout="warning"],
+.theme-dark .callout[data-callout="caution"],
+.theme-dark .callout[data-callout="question"] { --callout-color: 200, 168, 112; }
+.theme-dark .callout[data-callout="danger"],
+.theme-dark .callout[data-callout="error"],
+.theme-dark .callout[data-callout="failure"],
+.theme-dark .callout[data-callout="bug"] { --callout-color: 212, 112, 112; }
+.theme-dark .callout[data-callout="quote"],
+.theme-dark .callout[data-callout="cite"] { --callout-color: 120, 104, 102; }
+
+/* Selection and focus */
+.theme-dark ::selection { background: var(--ro-tint-visual); }
+.theme-dark .markdown-source-view.mod-cm6 .cm-active.cm-line { background: color-mix(in srgb, var(--ro-panel) 55%, transparent); }
+.theme-dark .cm-s-obsidian span.cm-formatting,
+.theme-dark .cm-s-obsidian span.cm-formatting-header { color: var(--ro-silt); }
+.theme-dark .markdown-rendered code,
+.theme-dark .markdown-source-view.mod-cm6 .cm-inline-code { color: var(--ro-copper); }
+.theme-dark .markdown-rendered mark { color: var(--ro-chart); }
+.theme-dark .markdown-rendered blockquote { background: transparent; }

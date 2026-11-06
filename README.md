@@ -49,7 +49,7 @@ scripts/install.sh           # install for the apps you have
 |---|---|
 | `--list`, `--dry-run` | show what would happen |
 | `--link` | symlink to the clone instead of copying |
-| `--only a,b` | limit to `ghostty,zellij,yazi,bat,wezterm,meli,opencode,claude,pi,xcode` |
+| `--only a,b` | limit to `ghostty,zellij,yazi,bat,wezterm,meli,opencode,claude,pi,obsidian,xcode` |
 | `--all` | install for every app, found or not |
 
 A different existing file is kept as `<name>.bak`. The installer prints the one line each app still needs in its config (for example `theme = redoctober`). Starship and lazygit are merge-only (neither can import a theme file), so the installer prints a block for you to copy and paste. Neovim and Yazi have their own package install, below. Windows isn't supported yet; copy the files by hand.
@@ -137,6 +137,10 @@ Copy `claude/redoctober.json` to `~/.claude/themes/redoctober.json`, then run `/
 ### Pi
 
 Copy `pi/redoctober.json` to `~/.pi/agent/themes/redoctober.json`, then run `/settings` in Pi and pick **redoctober** under Theme (or set `"theme": "redoctober"` in `~/.pi/agent/settings.json`). Pi hot-reloads the active theme from that path, so edits show up as you save.
+
+### Obsidian
+
+Copy the `obsidian/` folder to `<your vault>/.obsidian/themes/Red October/` (the folder name must match the theme name). In Settings > Appearance, set **Base color scheme** to Dark and pick **Red October** under Themes. Dark only. The installer needs to know your vault: `OBSIDIAN_VAULT=/path/to/vault scripts/install.sh --only obsidian`.
 
 ### Xcode
 
