@@ -325,6 +325,22 @@ test("claude: valid theme using only documented tokens and palette colors", func
   end
 end)
 
+test("pi: valid theme, every color is a var or palette hex", function()
+  local known = {}
+  for _, hex in pairs(values) do known[hex] = true end
+  local theme = vim.json.decode(gen.build()["pi/redoctober.json"])
+  assert(theme.name == "redoctober" and theme.appearance == "dark")
+  for name, hex in pairs(theme.vars) do
+    assert(known[hex], "var " .. name .. " = " .. hex .. " is not in the palette")
+  end
+  for token, ref in pairs(theme.colors) do
+    assert(theme.vars[ref] or known[ref], token .. " = " .. ref .. " is neither a var nor a palette color")
+  end
+  for token, ref in pairs(theme.export) do
+    assert(theme.vars[ref] or known[ref], "export." .. token .. " = " .. ref)
+  end
+end)
+
 -- Installer (always run against a sandbox home; env vars keep app tools out of the real config)
 local function install(args, home)
   local env = {
@@ -336,6 +352,7 @@ local function install(args, home)
     YAZI_CONFIG_HOME = home .. "/.config/yazi",
     ZELLIJ_CONFIG_DIR = home .. "/.config/zellij",
     CLAUDE_CONFIG_DIR = home .. "/.claude",
+    PI_CODING_AGENT_DIR = home .. "/.pi/agent",
   }
   local cmd = { "sh", gen.root .. "/scripts/install.sh" }
   vim.list_extend(cmd, args)
@@ -367,6 +384,7 @@ test("install: --all copies every theme to its default directory", function()
   assert(same_file(gen.root .. "/meli/redoctober.toml", cfg .. "/meli/themes/redoctober.toml"), "meli")
   assert(same_file(gen.root .. "/opencode/redoctober.json", cfg .. "/opencode/themes/redoctober.json"), "opencode")
   assert(same_file(gen.root .. "/claude/redoctober.json", home .. "/.claude/themes/redoctober.json"), "claude")
+  assert(same_file(gen.root .. "/pi/redoctober.json", home .. "/.pi/agent/themes/redoctober.json"), "pi")
   if vim.uv.os_uname().sysname == "Darwin" then
     assert(same_file(gen.root .. "/xcode/redoctober.xccolortheme", home .. "/Library/Developer/Xcode/UserData/FontAndColorThemes/redoctober.xccolortheme"), "xcode")
   end

@@ -7,7 +7,7 @@
 #   --list, --dry-run  show what would happen, change nothing
 #   --link             symlink to this clone instead of copying
 #   --all              install for every app, even if it was not detected
-#   --only a,b         limit to: ghostty zellij yazi bat wezterm meli opencode claude xcode
+#   --only a,b         limit to: ghostty zellij yazi bat wezterm meli opencode claude pi xcode
 #
 # A different existing file is kept as <name>.bak. Starship and lazygit are merge-only:
 # neither can import a theme file, so the script only tells you what to do.
@@ -125,6 +125,11 @@ go opencode opencode && {
 go claude claude && {
   place claude "$root/claude/redoctober.json" "${CLAUDE_CONFIG_DIR:-$HOME/.claude}/themes/redoctober.json"
   note claude 'run /theme and pick Red October (restart once if ~/.claude/themes did not exist)'
+}
+
+go pi pi && {
+  place pi "$root/pi/redoctober.json" "${PI_CODING_AGENT_DIR:-$HOME/.pi/agent}/themes/redoctober.json"
+  note pi 'run /settings and pick the redoctober theme (or set `"theme": "redoctober"` in settings.json)'
 }
 
 if [ "$(uname)" = Darwin ]; then
